@@ -1,55 +1,122 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import http from "./http-common"
 
 
 
 function Languages() {
 
+    // const [table, setTable] = useState([<table></table>])
+    const [row, setRow] = useState()
+    const [thead, setTHead] = useState()
+
     useEffect(() => {
+        const retrieveLanguages = async () => {
+            await http.get(`/languages`)
+            .then((res) => {
+
+                buildTable(res.data)
+
+            }).catch((err)=>{
+                setRow(<td>MongoDB might be down.  See console for error.</td>)
+                console.error(err)
+            })
+
+        }
         retrieveLanguages();
     }, [])
 
-    const retrieveLanguages = async () => {
-        const results = await http.get(`/languages`);
-        console.log(results.data)
 
-        buildTable(results.data)
-
-    }
 
     const buildTable = (languages) => {
 
-        const confidenceCategory = { Weak: [], Average: [], Strong: [] }
+        // const keys = Object.keys(languages[0])
+
+        // console.log(keys)
+
+        // const confidenceCategory = {}
+
+        // languages.forEach(language => {
+        //     confidenceCategory[language.Confidence]=[];
+        // });
+
+        // console.log(confidenceCategory)
+
+        // keys.forEach(key => {
+        //     console.log(key)
+        // });
+
+        const categories = { Novice: [], "Advanced Beginner": [], Competent: [], Proficient: [], Expert: [] }
         languages.forEach(({ Title, Confidence }) => {
-            console.log(`Title: ${Title}; Confidence: ${Confidence}`)
-            confidenceCategory[Confidence].push({Title})
+            // console.log(`Title: ${Title}; Confidence: ${Confidence}`)
+            categories[Confidence].push(Title)
         })
-        console.log(confidenceCategory)
+        // console.log(categories)
+
+        const thead = []
+        const row = []
+        let key2 = 0
+
+        for (const category in categories) {
+            thead.push(<th key={key2++}>{category}</th>)
+            // console.log(categories[category])
+            // table.push(<th>{category}</th>)
+            const titles = []
+            let key1 = 0
+            categories[category].forEach(title => {
+                titles.push(<li key={key1++}>{title}</li>)
+            })
+
+            row.push(<td key={key2}><ul key={key2++}>{titles}</ul></td>)
+        }
+        // console.log(row)
+        // console.log(thead)
+        setTHead(thead)
+        setRow(row)
+        // setTable(<table><thead>{thead}</thead><tbody><tr>{row}</tr></tbody></table>)
     }
 
+
     return (
+        // {table}
         <table>
+            <caption>
+                Languages
+            </caption>
             <thead>
                 <tr>
-                    <th>Confidence</th>
-                    <th>Languages</th>
+                    {thead}
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>Weak</th>
-                    <td>Prolog, Haskell, PHP, SQL, Mongoose, Java</td>
-                </tr>
-                <tr>
-                    <th>Average</th>
-                    <td>JavaScript, HTML, CSS, </td>
-                </tr>
-                <tr>
-                    <th>Strong</th>
-                    <td>C++</td>
+                    {row}
                 </tr>
             </tbody>
+
         </table>
+        // <table>
+        //     <thead>
+        //         <tr>
+        //             <th></th>
+        //             <th>Languages</th>
+        //         </tr>
+        //     </thead>
+        //     <tbody>
+
+        //         <tr>
+        //             <th>Weak</th>
+        //             <td>Prolog, Haskell, PHP, SQL, Mongoose, Java</td>
+        //         </tr>
+        //         <tr>
+        //             <th>Average</th>
+        //             <td>JavaScript, HTML, CSS, </td>
+        //         </tr>
+        //         <tr>
+        //             <th>Strong</th>
+        //             <td>C++</td>
+        //         </tr>
+        //     </tbody>
+        // </table>
     )
 }
 

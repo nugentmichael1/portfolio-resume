@@ -2,7 +2,7 @@ import React from 'react'
 
 function NavBar() {
     return (
-        <>NavBar
+        <>NavBar: About? - Work History - Projects
         </>
     )
 }
