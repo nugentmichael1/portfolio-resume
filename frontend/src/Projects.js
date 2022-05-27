@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react'
 import http from './http-common'
 
 const buildTable = (projects) => {
-  const thead = []
   const tbody = []
 
-  for (let category in projects[0]) {
-    // console.log(category)
-  }
+  // for (let category in projects[0]) {
+  //   // console.log(category)
+  // }
 
   let rowKey = 0
 
@@ -16,22 +15,13 @@ const buildTable = (projects) => {
 
     let key = 0
 
-    console.log(Title)
-
     row.push(<td key={key++}>{Title}</td>)
     row.push(<td key={key++}>{Subject}</td>)
-
-    //emphasized concepts
-
-
-
     row.push(<td key={key++}>{nestedLists(Emphasized_Concepts)}</td>)
-
-
-    // row.push(<td key={key++}>{Emphasized_Concepts}</td>)
-    // row.push(<td key={key++}>{Notes}</td>)
-    row.push(<td key={key++}>{Demo}</td>)
+    row.push(<td key={key++}>{Notes}</td>)
+    row.push(<td key={key++}><a href={Demo} target="_blank">New Tab/Window</a></td>)
     row.push(<td key={key++}><a href={GitHub} target="_blank">New Tab/Window</a></td>)
+
     tbody.push(<tr key={rowKey++}>{row}</tr>)
   });
 
@@ -40,11 +30,6 @@ const buildTable = (projects) => {
 }
 
 const nestedLists = (composite) => {
-
-  console.log(composite)
-
-  // console.log((Emphasized_Concepts))
-  // console.log((Array.isArray(Emphasized_Concepts)))
 
   if (Array.isArray(composite)) {
     const conceptsList = []
@@ -66,7 +51,8 @@ const nestedLists = (composite) => {
     return [label, ":", nestedLists(composite[label])]
   }
 
-  else return composite
+  //else
+  return composite
 }
 
 function Projects() {
@@ -103,7 +89,7 @@ function Projects() {
             <th>Title</th>
             <th>Subject</th>
             <th>Emphasized Concepts</th>
-            {/* <th>Notes</th> */}
+            <th>Notes</th>
             <th>Demo</th>
             <th>GitHub</th>
           </tr>
