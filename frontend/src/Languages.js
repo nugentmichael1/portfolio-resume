@@ -12,14 +12,14 @@ function Languages() {
     useEffect(() => {
         const retrieveLanguages = async () => {
             await http.get(`/languages`)
-            .then((res) => {
+                .then((res) => {
 
-                buildTable(res.data)
+                    buildTable(res.data)
 
-            }).catch((err)=>{
-                setRow(<td>MongoDB might be down.  See console for error.</td>)
-                console.error(err)
-            })
+                }).catch((err) => {
+                    setRow(<td>MongoDB might be down.  See console for error.</td>)
+                    console.error(err)
+                })
 
         }
         retrieveLanguages();
@@ -78,45 +78,23 @@ function Languages() {
 
     return (
         // {table}
-        <table>
-            <caption>
-                Languages
-            </caption>
-            <thead>
-                <tr>
-                    {thead}
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    {row}
-                </tr>
-            </tbody>
-
-        </table>
-        // <table>
-        //     <thead>
-        //         <tr>
-        //             <th></th>
-        //             <th>Languages</th>
-        //         </tr>
-        //     </thead>
-        //     <tbody>
-
-        //         <tr>
-        //             <th>Weak</th>
-        //             <td>Prolog, Haskell, PHP, SQL, Mongoose, Java</td>
-        //         </tr>
-        //         <tr>
-        //             <th>Average</th>
-        //             <td>JavaScript, HTML, CSS, </td>
-        //         </tr>
-        //         <tr>
-        //             <th>Strong</th>
-        //             <td>C++</td>
-        //         </tr>
-        //     </tbody>
-        // </table>
+        <div className='Languages'>
+            <table>
+                <caption>
+                    Languages
+                </caption>
+                <thead>
+                    <tr>
+                        {thead}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {row}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     )
 }
 

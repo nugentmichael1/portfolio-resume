@@ -5,9 +5,27 @@ ul {
 }
 
 table {
-  margin: auto;
+  margin: 1vh auto;
+  table-layout: fixed;
+}
+
+caption {
+  text-align: left;
 }
 
 td {
   text-align: center;
+}
+
+.Languages table {
+  width: 80%;
+}
+
+.Projects table {
+  width: 100%;
+}
+
+.Projects ul ul {
+  list-style-type: disc;
+  padding: 0 0 0 5vw;
 }
