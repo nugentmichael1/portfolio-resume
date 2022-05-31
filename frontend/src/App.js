@@ -1,15 +1,21 @@
 import { Routes, Route } from 'react-router-dom';
-import NavBar from './NavBar';
-import Languages from './Languages';
-import Projects from './Projects'
-import './App.css'
+import NavBar from './Components/NavBar';
+import Languages from './Components/Languages';
+import Projects from './Pages/Projects'
+import './CSS/App.css'
 
 function App() {
   return (
     <>
-    <Routes>
-      <Route path="/" element={[<NavBar key={0}/>, <Languages key={1}/>, <Projects key={2}/>]}/>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<NavBar />} />
+        <Route path="/:page" element={<NavBar />} />
+      </Routes>
+      <Routes>
+        <Route path="/" element={<Languages />} />
+        <Route path="/Skills" element={<Languages />} />
+        <Route path="/Projects" element={<Projects />} />
+      </Routes>
 
     </>
   );

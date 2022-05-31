@@ -1,0 +1,25 @@
+.Projects .even {
+    background-color: #e7c9a0;
+}
+
+.Projects table {
+    border-collapse: collapse;
+    width: 95%;
+    border: 1px solid black;
+}
+
+.Projects caption {
+    display: none;
+}
+
+.Projects {
+    margin: 0;
+    padding: 0;
+    background-color: #e7c9a9;
+}
+
+/*For nested lists.  Not used anymore. */
+.Projects ul ul {
+    list-style-type: disc;
+    padding: 0 0 0 5vw;
+}

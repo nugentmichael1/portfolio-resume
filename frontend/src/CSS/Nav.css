@@ -1,0 +1,33 @@
+Nav {
+    background-color: blue;
+    color: chocolate;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: large;
+}
+
+Nav .NavLink-Active li {
+    background-color: black;
+    border: solid 3px #e7c9a9;
+}
+
+.NavLink {
+    color: darkgoldenrod;
+}
+
+Nav a {
+    text-decoration: none;
+}
+
+Nav ul {
+    background-color: blue;
+}
+
+Nav li {
+    border: solid 3px #e7c9a9;
+    background-color: #e7c9a9;
+    padding: 2vh 2vw;
+    float: left;
+    border-radius: 20px 20px 0 0;
+}
