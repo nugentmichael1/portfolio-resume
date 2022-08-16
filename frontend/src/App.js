@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar';
-import Languages from './Components/Languages';
+import Skills from './Pages/Skills'
 import Projects from './Pages/Projects'
 import './CSS/App.css'
 
@@ -12,8 +12,8 @@ function App() {
         <Route path="/:page" element={<NavBar />} />
       </Routes>
       <Routes>
-        <Route path="/" element={<Languages />} />
-        <Route path="/Skills" element={<Languages />} />
+        <Route path="/" element={<Skills />} />
+        <Route path="/Skills" element={<Skills />} />
         <Route path="/Projects" element={<Projects />} />
       </Routes>
 

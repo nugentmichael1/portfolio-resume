@@ -8,8 +8,7 @@ Nav {
 }
 
 Nav .NavLink-Active li {
-    background-color: black;
-    border: solid 3px #e7c9a9;
+    background-color: #e7c9a9;
 }
 
 .NavLink {
@@ -21,12 +20,13 @@ Nav a {
 }
 
 Nav ul {
-    background-color: blue;
+    background-color: white;
+    /*overflow allows background to appear in conjuction with child floats*/
+    overflow: auto;
 }
 
 Nav li {
-    border: solid 3px #e7c9a9;
-    background-color: #e7c9a9;
+    background-color: #e7c9a0;
     padding: 2vh 2vw;
     float: left;
     border-radius: 20px 20px 0 0;

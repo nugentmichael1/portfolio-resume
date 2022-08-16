@@ -16,3 +16,7 @@ table {
     margin: 0 auto;
     /* table-layout: fixed; */
 }
+
+a {
+    color: darkgreen
+}

@@ -18,7 +18,7 @@ const NavLink = ({ page, selected, extraClass }) => {
     //identify active link with a special class
     let classes = selected ? 'NavLink-Active' : 'NavLink';
     if (extraClass) classes += ' ' + extraClass;
-    
+
     return <Link to={'/' + page} className={classes}><li>{title}</li></Link>
 }
 
@@ -27,16 +27,20 @@ function NavBar() {
 
     const { page } = useParams() || "home";
 
-
-    return (
+    return (<>
+        <header>
+            Header
+        </header>
         <nav>
             <ul className='nav'>
-                <NavLink page='Skills' selected={page === 'Skills'} />
+                <NavLink page='Skills' selected={page === 'Skills' || page === undefined} />
                 <NavLink page='Work_History' selected={page === 'Work_History'} />
                 <NavLink page='Projects' selected={page === 'Projects'} />
                 <NavLink page='Education' selected={page === 'Education'} />
             </ul>
         </nav>
+    </>
+
     )
 }
 
