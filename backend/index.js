@@ -7,6 +7,7 @@ dotenv.config()
 const MongoClient = mongodb.MongoClient
 
 const port = process.env.PORT || 8000
+// The ".env" file needs to be located in the same directory as the "node index.js" call is made.
 
 MongoClient.connect(
     process.env.RESUME_PORTFOLIO_DB_URI,
