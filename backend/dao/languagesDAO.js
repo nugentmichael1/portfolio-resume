@@ -14,6 +14,10 @@ export default class LanguagesDAO {
     }
 
     static async getLanguages() {
+
+        //debug
+        console.log("Debug: Inside LangaugesDAO.getLanguages()")
+
         try {
             const myCursor = await languages.find({},
                 {
@@ -23,6 +27,9 @@ export default class LanguagesDAO {
                 .sort({ Confidence: 1 })
 
             const results = await myCursor.toArray();
+
+            //debug
+            console.log("Debug: Successful mongoDB access!")
 
             return results;
         } catch (e) {
