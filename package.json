@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "heroku-postbuild": "npm run install-client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nugentmichael1/portfolio-resume.git"
+  },
+  "author": "Michael Nugent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nugentmichael1/portfolio-resume/issues"
+  },
+  "homepage": "https://github.com/nugentmichael1/portfolio-resume#readme"
+}
