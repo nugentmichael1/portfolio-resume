@@ -27,6 +27,7 @@ export default class LanguagesDAO {
             return results;
         } catch (e) {
             console.error(`Unable to issue find command, ${e}`)
+            console.log(`Error: Unable to issue find command, ${e}`)
             return [] 
         }
     }

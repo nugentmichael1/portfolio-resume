@@ -32,6 +32,7 @@ else{
 }
 // --------------- /deployment -------
 
+//not used as everything not explicitly declared in lines 12 and 13 will return/serve up the frontend.
 app.use("*", (req, res) => res.status(404).json({ error: "not found" }))
 
 export default app
