@@ -11,13 +11,15 @@ app.use(express.json())
 
 app.use("/api/v1/languages", languages)
 app.use("/api/v1/projects", projects)
-app.use("*", (req, res) => res.status(404).json({ error: "not found" }))
+
 
 // --------------- deployment -------
 
 const __dirname = path.resolve();
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static(path.join(__dirname,'/frontend/build')))
+
+    console.log('Deployment Debug: process.env.NODE_ENV=',process.env.NODE_ENV)
 
     app.get('*', (req,res)=>{
         res.sendFile(path.resolve(__dirname,'frontend','build','index.html'))
@@ -29,5 +31,7 @@ else{
     });
 }
 // --------------- /deployment -------
+
+app.use("*", (req, res) => res.status(404).json({ error: "not found" }))
 
 export default app
