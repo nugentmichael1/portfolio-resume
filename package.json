@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node backend/index.js",
+    "start": "node backend/index.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend && npm install --prefix backend"
   },
   "repository": {
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/nugentmichael1/portfolio-resume/issues"
   },
-  "homepage": "https://github.com/nugentmichael1/portfolio-resume#readme"
+  "homepage": "https://github.com/nugentmichael1/portfolio-resume#readme",
+  "dependencies": {
+    "firebase": "^9.9.3"
+  }
 }
