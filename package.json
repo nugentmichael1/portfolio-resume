@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nugentmichael1/portfolio-resume#readme",
   "dependencies": {
-    "firebase": "^9.9.3"
+    "firebase": "^9.9.3",
+    "firebase-functions": "^3.23.0"
   }
 }
