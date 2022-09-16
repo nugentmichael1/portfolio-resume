@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
+//connect to firebase app via credentials, which are stored locally (not in git repository) in .env file.  Can be retrieved from firebase console (online).
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -20,13 +21,25 @@ async function getLanguagesFS() {
     console.log(firebaseConfig)
 
     try {
+        //Get Languages collection from firestore
         const languagesCol = collection(db, 'Languages');
-        console.log(languagesCol);
-        const languagesSnapshot = await getDocs(languagesCol);
-        console.log(languagesSnapshot);
-        const languagesList = languagesSnapshot.docs.map(doc => doc.data());
-        console.log(languagesList)
 
+        //debug: show collection
+        // console.log(languagesCol);
+
+        //Get snapshot of Languages collection
+        const languagesSnapshot = await getDocs(languagesCol);
+
+        //debug: show snapshot
+        // console.log(languagesSnapshot);
+
+        //Get documents of Languages collection
+        const languagesList = languagesSnapshot.docs.map(doc => doc.data());
+
+        //debug: show documents
+        // console.log(languagesList)
+
+        //Return Languages documents as array
         return languagesList;
 
     } catch (e) {
