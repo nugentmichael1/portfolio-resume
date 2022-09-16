@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import http from "../http-common"
+import getLanguagesFS from '../firestore'
 
 
 
@@ -16,13 +17,29 @@ function Languages() {
 
                     buildTable(res.data)
 
-                }).catch((err) => {
+                })
+                .catch((err) => {
                     setRow(<td>MongoDB might be down, or paused from inactivity.  See console for error.</td>)
                     console.error(err)
                 })
 
         }
         retrieveLanguages();
+
+        const retrieveLanguagesFS = async () => {
+            await getLanguagesFS()
+                .then((res) => {
+                    buildTable(res)
+                })
+                .catch((err) => {
+                    setRow(<td>Firestore call failed.  See console for error.</td>)
+                    console.error(err)
+                })
+        }
+
+        console.log(retrieveLanguagesFS());
+
+
     }, [])
 
 
@@ -46,9 +63,9 @@ function Languages() {
         // });
 
         const categories = { Novice: [], "Advanced Beginner": [], Competent: [], Proficient: [], Expert: [] }
-        languages.forEach(({ Title, Confidence }) => {
+        languages.forEach(({ Name, Confidence }) => {
             // console.log(`Title: ${Title}; Confidence: ${Confidence}`)
-            categories[Confidence].push(Title)
+            categories[Confidence].push(Name)
         })
         // console.log(categories)
 
