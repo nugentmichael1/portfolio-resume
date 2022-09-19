@@ -13,7 +13,7 @@ app.use("/api/v1/languages", languages)
 app.use("/api/v1/projects", projects)
 
 
-// --------------- deployment -------
+// ---------------heroku deployment -------
 
 const __dirname = path.resolve();
 if(process.env.NODE_ENV === 'production'){
@@ -30,7 +30,7 @@ else{
         res.send("API is running..");
     });
 }
-// --------------- /deployment -------
+// ---------------heroku /deployment -------
 
 //not used; everything not explicitly declared in lines 12 and 13 will return/serve up the frontend.
 app.use("*", (req, res) => res.status(404).json({ error: "not found" }))
