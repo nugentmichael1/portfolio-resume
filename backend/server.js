@@ -2,37 +2,23 @@ import express from "express"
 import cors from "cors"
 import languages from "./api/languages.route.js"
 import projects from "./api/projects.route.js"
-import path from "path"
 
 const app = express()
 
+//enables cross origin resource sharing
 app.use(cors())
+
+//parses requests' json data.  
+//probably don't need this middleware. The only two routes are static database queries, and their code is stored within the backend. (ie. there are no dynamic requests from the frontend that requires json format).
 app.use(express.json())
 
+//"languages" route
 app.use("/api/v1/languages", languages)
+
+//"projects" route
 app.use("/api/v1/projects", projects)
 
-
-// ---------------heroku deployment -------
-
-const __dirname = path.resolve();
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname,'/frontend/build')))
-
-    console.log('Deployment Debug: process.env.NODE_ENV=',process.env.NODE_ENV)
-
-    app.get('*', (req,res)=>{
-        res.sendFile(path.resolve(__dirname,'frontend','build','index.html'))
-    })
-}
-else{
-    app.get("/",(req,res)=>{
-        res.send("API is running..");
-    });
-}
-// ---------------heroku /deployment -------
-
-//not used; everything not explicitly declared in lines 12 and 13 will return/serve up the frontend.
+//error route for anything else
 app.use("*", (req, res) => res.status(404).json({ error: "not found" }))
 
 export default app
