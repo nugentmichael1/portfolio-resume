@@ -18,8 +18,6 @@ const db = getFirestore(app)
 
 async function getLanguagesFS() {
 
-    console.log(firebaseConfig)
-
     try {
         //Get Languages collection from firestore
         const languagesCol = collection(db, 'Languages');
