@@ -4,6 +4,10 @@ module.exports = {
     es6: true,
     node: true,
   },
+  parserOptions: {
+    parser: "babel-eslint",
+    ecmaVersion: 8,
+  },
   extends: [
     "eslint:recommended",
     "google",
