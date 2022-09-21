@@ -11,7 +11,7 @@ admin.initializeApp();
 
 // Langauges "Route".
 // Queries Firestore database for Languages collection's documents.
-exports.getLanguages = functions.https.onRequest(async (req, res) => {
+exports.getLanguages = functions.https.onRequest((req, res) => {
 
     //debug info: alert console this function was called
     functions.logger.info("Firebase Functions call made to getLanguages().", { structuredData: true });
@@ -20,17 +20,17 @@ exports.getLanguages = functions.https.onRequest(async (req, res) => {
     let languagesList;
 
     //fill varaible "languagesList" with Firebase data from collection "Languages"
-    await admin.firestore().collection('Languages').get()
-    
+    return admin.firestore().collection('Languages').get()
+
         //take snapshot of "Languages" collection
         .then(snapshot => {
 
             //Get data for each document of collection snapshot
             languagesList = snapshot.docs.map(doc => doc.data())
-        })
 
-    //return list of languages to client
-    res.send(languagesList);
+            //terminate the function and send back data
+            res.send(languagesList);
+        })
 })
 
 // Projects "Route".
