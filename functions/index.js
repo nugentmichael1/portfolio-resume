@@ -1,3 +1,5 @@
+// This is the main file for Firebase Functions.
+
 
 // -- Dependencies --
 
@@ -39,7 +41,7 @@ app.get('/getLanguages', (req, res) => {
     //debug info: alert console this function was called
     functions.logger.info("Firebase Functions call made to getLanguages().", { structuredData: true });
 
-    //fill variable "languagesList" with Firebase data from collection "Languages"
+    //access Firebase collection: "Languages"
     return admin.firestore().collection('Languages').get()
 
         //take snapshot of "Languages" collection
@@ -59,10 +61,24 @@ app.get('/getProjects', (req, res) => {
     //debug info: alert console this function was called
     functions.logger.info("Firebase Functions call made to getProjects().", { structuredData: true });
 
-    //send back data
-    res.send("This will return projects data.")
+    //access Firebase collection: "Projects"
+    return admin.firestore().collection('Projects').get()
 
+        //take snapshot of "Projects" collections
+        .then(snapshot => {
+
+            //Get data for each document of collection snapshot
+            const projectsList = snapshot.docs.map(doc => doc.data())
+
+            //terminate function and send back data
+            res.send(projectsList);
+        })
 });
+
+//"Error: Not Found" route for anything else
+app.use("*", (req, res) => res.status(404).json({ error: "not found" }))
+
+
 
 // Export entire api as one Firebase Function
 exports.api = functions.https.onRequest(app)
