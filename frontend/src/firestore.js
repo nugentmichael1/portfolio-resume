@@ -1,3 +1,5 @@
+// This file is used to authorize the app to directly connect to Firebase's Firestore database.  This is in contrast to the indirect method that connects through admin sdk to Firebase Functions, and then to the Firebase Firestore database.
+
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
@@ -46,9 +48,6 @@ async function getLanguagesFS() {
 
         return [];
     }
-
-
-
 }
 
 export default getLanguagesFS;
