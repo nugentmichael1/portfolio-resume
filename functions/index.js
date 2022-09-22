@@ -36,10 +36,10 @@ app.use(cors({ origin: true }));
 // -- Routes --
 
 // Languages Route - Queries Firestore database for Languages collection's documents.
-app.get('/getLanguages', (req, res) => {
+app.get('/languages', (req, res) => {
 
     //debug info: alert console this function was called
-    functions.logger.info("Firebase Functions call made to getLanguages().", { structuredData: true });
+    functions.logger.info("Firebase Functions call made to get languages.", { structuredData: true });
 
     //access Firebase collection: "Languages"
     return admin.firestore().collection('Languages').get()
@@ -56,10 +56,10 @@ app.get('/getLanguages', (req, res) => {
 })
 
 // Projects Route - Queries Firestore database for Projects collection's documents.
-app.get('/getProjects', (req, res) => {
+app.get('/projects', (req, res) => {
 
     //debug info: alert console this function was called
-    functions.logger.info("Firebase Functions call made to getProjects().", { structuredData: true });
+    functions.logger.info("Firebase Functions call made to get projects.", { structuredData: true });
 
     //access Firebase collection: "Projects"
     return admin.firestore().collection('Projects').get()
