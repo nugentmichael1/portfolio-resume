@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react'
+
+//indirect firebase functions to firestore access
 import http from "../http-common"
-import getLanguagesFS from '../firestore'
+
+//direct firestore access
+//import getLanguagesFS from '../firestore'
 
 
 
@@ -12,7 +16,7 @@ function Languages() {
 
     useEffect(() => {
         const retrieveLanguages = async () => {
-            await http.get(`/languages`)
+            await http.get(`/getLanguages`)
                 .then((res) => {
 
                     buildTable(res.data)
@@ -26,18 +30,19 @@ function Languages() {
         }
         retrieveLanguages();
 
-        const retrieveLanguagesFS = async () => {
-            await getLanguagesFS()
-                .then((res) => {
-                    buildTable(res)
-                })
-                .catch((err) => {
-                    setRow(<td>Firestore call failed.  See console for error.</td>)
-                    console.error(err)
-                })
-        }
+        // // direct firestore access version
+        // const retrieveLanguagesFS = async () => {
+        //     await getLanguagesFS()
+        //         .then((res) => {
+        //             buildTable(res)
+        //         })
+        //         .catch((err) => {
+        //             setRow(<td>Firestore call failed.  See console for error.</td>)
+        //             console.error(err)
+        //         })
+        // }
 
-        console.log(retrieveLanguagesFS());
+        // console.log(retrieveLanguagesFS());
 
 
     }, [])
