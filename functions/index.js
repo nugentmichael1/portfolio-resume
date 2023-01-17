@@ -1,4 +1,4 @@
-// This is the main file for Firebase Functions.
+// This is the main file for Firebase Functions.  It is akin to the backend or server of a traditional MERN stack.
 
 
 // -- Dependencies --

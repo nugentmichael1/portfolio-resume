@@ -4,7 +4,10 @@ import '../CSS/Skills.css'
 
 function Skills() {
     return (
-        <div className='Skills'><Languages /></div>
+        <div className='Skills'>
+            <h1>Skills</h1>
+            <Languages />
+        </div>
     )
 }
 

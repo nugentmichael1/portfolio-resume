@@ -28,11 +28,9 @@ function NavBar() {
     const { page } = useParams() || "home";
 
     return (<>
-        <header>
-            Header
-        </header>
         <nav>
             <ul className='nav'>
+                <NavLink page='Profile' selected={page === 'Profile'} />
                 <NavLink page='Skills' selected={page === 'Skills' || page === undefined} />
                 <NavLink page='Work_History' selected={page === 'Work_History'} />
                 <NavLink page='Projects' selected={page === 'Projects'} />
