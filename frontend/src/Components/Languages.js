@@ -23,7 +23,7 @@ function Languages() {
 
                 })
                 .catch((err) => {
-                    setRow(<td>MongoDB might be down, or paused from inactivity.  See console for error.</td>)
+                    setRow(<td>Firebase's database service, Firestore, might be down.  See console for error.</td>)
                     console.error(err)
                 })
 
