@@ -16,7 +16,7 @@ function Languages() {
 
     useEffect(() => {
         const retrieveLanguages = async () => {
-            await http.get(`/languages`)
+            await http.get(`/languages/all`)
                 .then((res) => {
 
                     buildTable(res.data)

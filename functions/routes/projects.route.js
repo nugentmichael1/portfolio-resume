@@ -10,8 +10,8 @@ const admin = require('firebase-admin');
 
 const router = express.Router()
 
-// Projects Route - Queries Firestore database for Projects collection's documents.
-router.route("/").get((req, res, next) => {
+// Queries Firestore database for and returns all Projects collection's documents.
+router.route("/all").get((req, res, next) => {
 
     //debug info: alert console this function was called
     functions.logger.info("Firebase Functions call made to get projects.", { structuredData: true });
@@ -30,4 +30,4 @@ router.route("/").get((req, res, next) => {
         })
 });
 
-exports.handler = router;
+exports.router = router;

@@ -74,7 +74,7 @@ function Projects() {
 
     const getProjects = async () => {
 
-      await http.get("/projects")
+      await http.get("/projects/all")
 
         .then((res) => {
 
