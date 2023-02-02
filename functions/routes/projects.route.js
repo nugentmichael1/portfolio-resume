@@ -14,11 +14,6 @@ const router = express.Router()
 
 // --------------------------
 
-//debug
-// console.log(academicProjectsCtrl)
-// console.log(academicProjectsCtrl.handler)
-// console.log(academicProjectsCtrl.handler.getAll)
-
 // Queries data for and returns all Academic Projects collection's documents.
 router.route("/all").get(academicProjectsCtrl.api.getAll)
 

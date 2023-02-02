@@ -9,7 +9,7 @@ const languagesCtrl = require("../controllers/languages.controller")
 
 // --------------------------
 
-// Load express router inorder to overload with new routes
+// Load express router in order to overload with new routes
 const router = express.Router()
 
 // --------------------------
