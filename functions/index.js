@@ -17,8 +17,10 @@ const cors = require('cors');
 
 // -----------------------
 
+// Languages router
 const languages = require("./routes/languages.route")
 
+// Projects router
 const projects = require("./routes/projects.route")
 
 // -- Initializations --
@@ -59,7 +61,7 @@ app.use("/languages", languages.router);
 app.use("/projects", projects.router);
 
 //404 for anything other route
-app.use("*", (req, res) => res.status(404).json({ error: "Firebase functions accessed, but supplied route is undefined." }))
+app.use("*", (req, res) => res.status(404).json({ error: "Firebase functions accessed, but argument route has no match." }))
 
 
 // Export entire express app as one Firebase Function

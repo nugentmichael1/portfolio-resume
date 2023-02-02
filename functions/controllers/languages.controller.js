@@ -1,27 +1,31 @@
 //Languages Controller
 
+// Dependencies  -------------------------
+
 // The Cloud Functions for Firebase SDK to create Cloud Functions and set up triggers.
 const functions = require("firebase-functions");
 
-// The Firebase Admin SDK to access Firestore.
-const admin = require('firebase-admin');
+const LanguagesDAO = require("../DAOs/languagesDAO")
+
+
+// Controller class
 
 const apiGetLanguages = async function (req, res, next) {
+
     //debug info: alert console this function was called
-    functions.logger.info("Firebase Functions call made to get languages.", { structuredData: true });
+    functions.logger.info("Call made to languages DAO.", { structuredData: true });
 
-    //access Firebase collection: "Languages"
-    return admin.firestore().collection('Languages').get()
+    //debug
+    // console.log(LanguagesDAO)
+    // console.log(LanguagesDAO.handler)
+    // console.log(LanguagesDAO.handler.getLanguages)
 
-        //take snapshot of "Languages" collection
-        .then(snapshot => {
+    const result = await LanguagesDAO.handler.getLanguages()
 
-            //Get data for each document of collection snapshot
-            const languagesList = snapshot.docs.map(doc => doc.data())
+    //debug
+    // console.log(result)
 
-            //terminate the function and send back data
-            res.send(languagesList);
-        })
+    res.json(result)
 }
 
 exports.apiGetLanguages = apiGetLanguages;

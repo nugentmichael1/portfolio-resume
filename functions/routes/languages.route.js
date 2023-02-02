@@ -9,14 +9,14 @@ const languagesCtrl = require("../controllers/languages.controller")
 
 // --------------------------
 
-// Load router from express
+// Load express router inorder to overload with new routes
 const router = express.Router()
 
 // --------------------------
 
 
-// Queries database for and returns all of Languages collection's documents.
+// Queries data for and returns all of Languages collection's documents.
 router.route("/all").get(languagesCtrl.apiGetLanguages)
 
-// Firebase functions export syntax
+// Export overloaded express router (Firebase functions export syntax)
 exports.router = router;

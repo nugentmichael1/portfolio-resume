@@ -1,33 +1,26 @@
+// Routes for Academic Projects data.  Only consists of CRUD operations.
+
+// Import express
 const express = require("express");
 
-
-// The Cloud Functions for Firebase SDK to create Cloud Functions and set up triggers.
-const functions = require("firebase-functions");
-
-// The Firebase Admin SDK to access Firestore.
-const admin = require('firebase-admin');
+// Import controller for Academic Projects
+const academicProjectsCtrl = require("../controllers/projects.controller")
 
 
+// --------------------------
+
+// Load express router inorder to overload with new routes
 const router = express.Router()
 
-// Queries Firestore database for and returns all Projects collection's documents.
-router.route("/all").get((req, res, next) => {
+// --------------------------
 
-    //debug info: alert console this function was called
-    functions.logger.info("Firebase Functions call made to get projects.", { structuredData: true });
+//debug
+// console.log(academicProjectsCtrl)
+// console.log(academicProjectsCtrl.handler)
+// console.log(academicProjectsCtrl.handler.getAll)
 
-    //access Firebase collection: "Projects"
-    return admin.firestore().collection('Projects').get()
+// Queries data for and returns all Academic Projects collection's documents.
+router.route("/all").get(academicProjectsCtrl.api.getAll)
 
-        //take snapshot of "Projects" collections
-        .then(snapshot => {
-
-            //Get data for each document of collection snapshot
-            const projectsList = snapshot.docs.map(doc => doc.data())
-
-            //terminate function and send back data
-            res.send(projectsList);
-        })
-});
-
+// Export overloaded express router (Firebase functions export syntax)
 exports.router = router;
