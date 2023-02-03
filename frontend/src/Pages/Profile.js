@@ -1,4 +1,5 @@
 import React from "react";
+import resume from "../Components/MichaelNugentResume.pdf"
 
 function Profile() {
 
@@ -16,6 +17,8 @@ function Profile() {
                 <li id="phone">(949) 293-5705</li>
                 <li id="location">Irvine, CA</li>
             </ul>
+            <h3>Resume</h3>
+            <p><a href={resume} target="_blank" rel="noreferrer">Open/Download</a></p>
         </div>
     )
 

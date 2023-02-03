@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar';
 import Skills from './Pages/Skills'
 import Profile from './Pages/Profile'
+import WorkExperience from './Pages/WorkExperience';
 import Education from './Pages/Education'
 import './CSS/App.css'
 
@@ -23,9 +24,10 @@ function App() {
         <Route path="/:page" element={<NavBar />} />
       </Routes>
       <Routes>
-        <Route path="/" element={<Skills />} />
+        <Route path="/" element={<Profile />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Skills" element={<Skills />} />
+        <Route path="/Work_Experience" element={<WorkExperience />} />
         <Route path="/Education" element={<Education />} />
       </Routes>
 
