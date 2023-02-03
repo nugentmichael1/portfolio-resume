@@ -20,6 +20,9 @@ const cors = require('cors');
 // Languages router
 const languages = require("./routes/languages.route")
 
+// Work Experience router
+const experience = require("./routes/experience.route")
+
 // Projects router
 const projects = require("./routes/projects.route")
 
@@ -56,6 +59,9 @@ app.get('/all', (req, res) => {
 
 // Languages Route
 app.use("/languages", languages.router);
+
+// Work Experience Route
+app.use("/experience", experience.router);
 
 // Academic Projects Route
 app.use("/projects", projects.router);
