@@ -33,7 +33,6 @@ function NavBar() {
                 <NavLink page='Profile' selected={page === 'Profile'} />
                 <NavLink page='Skills' selected={page === 'Skills' || page === undefined} />
                 <NavLink page='Work_History' selected={page === 'Work_History'} />
-                <NavLink page='Projects' selected={page === 'Projects'} />
                 <NavLink page='Education' selected={page === 'Education'} />
             </ul>
         </nav>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import http from '../http-common'
-import '../CSS/Projects.css'
+import '../CSS/AcademicProjects.css'
 
 
 
@@ -93,7 +93,7 @@ function Projects() {
     <div className='Projects'>
       <table>
         <caption>
-          Projects
+          Academic Projects
         </caption>
         <thead>
           <tr>
