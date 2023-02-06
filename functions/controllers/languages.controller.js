@@ -8,8 +8,7 @@ const functions = require("firebase-functions");
 const LanguagesDAO = require("../DAOs/languagesDAO")
 
 
-// Controller class
-
+// Controller class (need to actually make a class at some point to match other controllers)
 const apiGetLanguages = async function (req, res, next) {
 
     //debug info: alert console this function was called
@@ -20,10 +19,13 @@ const apiGetLanguages = async function (req, res, next) {
     // console.log(LanguagesDAO.handler)
     // console.log(LanguagesDAO.handler.getLanguages)
 
+    //debug
+    // console.log("Calling languagesDAO from languagesCtrl")
+
     const result = await LanguagesDAO.handler.getLanguages()
 
     //debug
-    // console.log(result)
+    // console.log("languages ctrl result:", result)
 
     res.json(result)
 }

@@ -26,6 +26,9 @@ const experience = require("./routes/experience.route")
 // Projects router
 const projects = require("./routes/projects.route")
 
+// All Data router
+const all = require("./routes/all.route")
+
 // -- Initializations --
 
 // Initialize express app
@@ -44,18 +47,7 @@ app.use(cors({ origin: true }));
 // -- Routes --
 
 // All Data Route - 
-app.get('/all', (req, res) => {
-    functions.logger.info("Firebase Functions call made to get all Firestore data.", { structuredData: true });
-
-    const all_data = [];
-    //Languages
-    //all_data.push(await getLanguages())
-    //Academic Projects
-    //all_data.push(await getAcademicProjects())
-    //Work History
-    //all_data.push(await getWorkHistory())
-
-})
+app.use('/all', all.router)
 
 // Languages Route
 app.use("/languages", languages.router);

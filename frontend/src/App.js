@@ -1,22 +1,37 @@
+//Software Engineering Portfolio 2023
+
+//routes (react links)
 import { Routes, Route } from 'react-router-dom';
+
+//components
 import NavBar from './Components/NavBar';
+
+//pages
 import Skills from './Pages/Skills'
 import Profile from './Pages/Profile'
 import WorkExperience from './Pages/WorkExperience';
 import Education from './Pages/Education'
+
+//css
 import './CSS/App.css'
 
-//mock example of initial and complete download from backend instead of individual and as needed.  This will reduce api calls (which cost me money if over google's set limit) from regular users.  It will also as challenge nefarious actors who want to abuse my api as they would have to at least clear session data before page refreshes.
-var BackendData = sessionStorage.getItem("data");
-console.log("Session Storage Experiment:", BackendData);
-if (BackendData === null) {
-  //mock example.  will replace with actual call to backend, which grabs ALL database tables' information
-  console.log("Session Storage Experiment: Calling backend for data.")
-  sessionStorage.setItem("data", "Some data")
-  console.log("Session Storage Experiment:", sessionStorage.getItem("data"))
-}
+//functions
+import retrieveAllData from './Auxiliary/retrieveAllData';
+
+
+
+//Complete download of all data from backend instead of individually as needed.  
+//This will reduce api calls (which cost me money if over google's set limit) from regular users, and challenge nefarious actors who want to abuse the api; they would have to reopen tabs.
+const allData = sessionStorage.getItem("allData")
+
+//Check to see if data is already present.  Retrieve if not.
+if (allData === null) retrieveAllData()
+
 
 function App() {
+
+
+
   return (
     <>
       <Routes>
@@ -24,7 +39,7 @@ function App() {
         <Route path="/:page" element={<NavBar />} />
       </Routes>
       <Routes>
-        <Route path="/" element={<Profile />} />
+        <Route path="/" element={<Profile myTest={allData} />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Skills" element={<Skills />} />
         <Route path="/Work_Experience" element={<WorkExperience />} />

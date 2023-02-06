@@ -1,10 +1,11 @@
 import React from "react";
 import resume from "../Components/MichaelNugentResume.pdf"
 
-function Profile() {
-
+function Profile(myTest) {
+    console.log("Prop test: ", myTest)
     return (
         <div className='Profile'>
+            <p>{myTest.test}</p>
             <h1>Michael Nugent</h1>
             <h2>Entry-Level Software Engineer</h2>
             <h3>Summary</h3>
