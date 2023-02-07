@@ -11,12 +11,12 @@ const projectsDAO = require("../DAOs/projectsDAO")
 class allCtrl {
     static async getAll(req, res, next) {
 
-        functions.logger.info("Firebase Functions call made to get all Firestore data.", { structuredData: true });
+        functions.logger.info("Firebase Functions call made to get 'all' Firestore data.", { structuredData: true });
 
         const allData = {};
 
         //debug
-        console.log("Calling languagesDAO from 'allCtrl'")
+        // console.log("Calling languagesDAO from 'allCtrl'")
 
         //Languages
         try {
@@ -34,19 +34,14 @@ class allCtrl {
         }
 
 
-        //debug
-        // console.log(allData)
-
-
         //Work History
         const experience = await experienceDAO.api.getAll()
-
         //add work experience data to "all" collection
         allData.experience = experience
 
-        //all_data.push(await getWorkHistory())
         //Academic Projects
-        //all_data.push(await getAcademicProjects())
+        const projects = await projectsDAO.api.getAll()
+        allData.projects = projects
 
 
         res.send(allData)

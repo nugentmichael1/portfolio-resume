@@ -3,8 +3,6 @@
 //express configuation
 import http from "../http-common"
 
-
-
 const retrieveAllData = async () => {
 
     //route queries backend for all data
@@ -32,6 +30,9 @@ const retrieveAllData = async () => {
             sessionStorage.setItem("projects", JSON.stringify(allData.projects))
 
             // ----------------------------------------
+
+            //dispatch event to alert data dependent components
+            window.dispatchEvent(new Event('allData'))
 
         })
 

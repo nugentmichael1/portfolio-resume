@@ -1,87 +1,64 @@
 import React, { useEffect, useState } from 'react'
 
-//indirect firebase functions to firestore access
-import http from "../http-common"
-
-//direct firestore access
-//import getLanguagesFS from '../firestore'
 
 
 
 function Languages() {
 
-    // const [table, setTable] = useState([<table></table>])
-    const [row, setRow] = useState()
+    // states for table row and header
+    const [row, setRow] = useState(<td>Fetching languages data from backend.</td>)
     const [thead, setTHead] = useState()
 
     useEffect(() => {
-        const retrieveLanguages = async () => {
-            await http.get(`/languages/all`)
-                .then((res) => {
 
-                    buildTable(res.data)
+        const getLanguages = () => {
 
-                })
-                .catch((err) => {
-                    setRow(<td>Firebase's database service, Firestore, might be down.  See console for error.</td>)
-                    console.error(err)
-                })
+            //get languages data from session storage
+            const languages = JSON.parse(sessionStorage.getItem("languages"))
 
+            //build table with languages data
+            buildTable(languages)
+
+            //remove session storage change event listener, if it even exists
+            window.removeEventListener('allData', getLanguages)
         }
-        retrieveLanguages();
 
-        // // direct firestore access version
-        // const retrieveLanguagesFS = async () => {
-        //     await getLanguagesFS()
-        //         .then((res) => {
-        //             buildTable(res)
-        //         })
-        //         .catch((err) => {
-        //             setRow(<td>Firestore call failed.  See console for error.</td>)
-        //             console.error(err)
-        //         })
-        // }
+        //check session storage for existence of langauges data
 
-        // console.log(retrieveLanguagesFS());
+        if (sessionStorage.getItem("languages") != null)
+            //retrieve and build table
+            getLanguages()
 
+        else {
+            //set up event listener to wait for arrival of data
+            window.addEventListener('allData', getLanguages)
+        }
 
     }, [])
 
 
-
+    //builds table of languages with passed data
     const buildTable = (languages) => {
 
-        // const keys = Object.keys(languages[0])
-
-        // console.log(keys)
-
-        // const confidenceCategory = {}
-
-        // languages.forEach(language => {
-        //     confidenceCategory[language.Confidence]=[];
-        // });
-
-        // console.log(confidenceCategory)
-
-        // keys.forEach(key => {
-        //     console.log(key)
-        // });
 
         const categories = { Novice: [], "Advanced Beginner": [], Competent: [], Proficient: [], Expert: [] }
+
+        //distribute each language name to its associated cofidence level
         languages.forEach(({ Name, Confidence }) => {
-            // console.log(`Title: ${Title}; Confidence: ${Confidence}`)
             categories[Confidence].push(Name)
         })
-        // console.log(categories)
 
+        //arrays for header and row
         const thead = []
         const row = []
+
+        //keys for child components
         let key2 = 0
 
+        
         for (const category in categories) {
             thead.push(<th key={key2++}>{category}</th>)
-            // console.log(categories[category])
-            // table.push(<th>{category}</th>)
+
             const titles = []
             let key1 = 0
             categories[category].forEach(title => {
@@ -90,11 +67,10 @@ function Languages() {
 
             row.push(<td key={key2}><ul key={key2++}>{titles}</ul></td>)
         }
-        // console.log(row)
-        // console.log(thead)
+
+        //use state functions to dynamically change table header and row
         setTHead(thead)
         setRow(row)
-        // setTable(<table><thead>{thead}</thead><tbody><tr>{row}</tr></tbody></table>)
     }
 
 
@@ -121,3 +97,45 @@ function Languages() {
 }
 
 export default Languages
+
+
+//indirect firebase functions to firestore access.
+// import http from "../http-common"
+
+//direct firestore access
+//import getLanguagesFS from '../firestore'
+
+
+// // direct firestore access version
+// const retrieveLanguagesFS = async () => {
+//     await getLanguagesFS()
+//         .then((res) => {
+//             buildTable(res)
+//         })
+//         .catch((err) => {
+//             setRow(<td>Firestore call failed.  See console for error.</td>)
+//             console.error(err)
+//         })
+// }
+
+// console.log(retrieveLanguagesFS());
+
+
+
+
+        // if (sSLanguages != null) buildTable(JSON.parse(sessionStorage.getItem("languages")))
+        // const retrieveLanguages = async () => {
+        //     await http.get(`/languages/all`)
+        //         .then((res) => {
+
+        //             buildTable(res.data)
+
+        //         })
+        //         .catch((err) => {
+        //             setRow(<td>Failed to fetch Langauges data from backend.  See console for error.</td>)
+        //             console.error(err)
+        //         })
+
+        // }
+
+        // retrieveLanguages();

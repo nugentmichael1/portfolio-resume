@@ -46,8 +46,9 @@ function WorkExperience() {
 
     for (const record in records) {
 
-      console.log(records[record].Start)
-      console.log(new Date(records[record].Start._seconds * 1000))
+      //debug
+      // console.log(records[record].Start)
+      // console.log(new Date(records[record].Start._seconds * 1000))
 
 
       //create table row

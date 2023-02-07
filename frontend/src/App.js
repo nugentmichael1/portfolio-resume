@@ -30,8 +30,6 @@ if (allData === null) retrieveAllData()
 
 function App() {
 
-
-
   return (
     <>
       <Routes>
@@ -45,7 +43,6 @@ function App() {
         <Route path="/Work_Experience" element={<WorkExperience />} />
         <Route path="/Education" element={<Education />} />
       </Routes>
-
     </>
   );
 }
