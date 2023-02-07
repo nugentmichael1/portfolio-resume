@@ -3,10 +3,7 @@ import http from '../http-common'
 import '../CSS/AcademicProjects.css'
 
 
-
-
 const buildTable = (projects) => {
-
 
   const tbody = []
 
@@ -17,6 +14,7 @@ const buildTable = (projects) => {
   let even = true
 
   projects.forEach(({ Title, Subject, Emphasized_Concepts, Notes, Demo, GitHub }) => {
+
     const row = []
 
     let evenOddClassName = even ? "even" : "odd"
@@ -72,21 +70,21 @@ function Projects() {
 
   useEffect(() => {
 
-    const getProjects = async () => {
+    const getProjects = () => {
 
-      await http.get("/projects/all")
+      const projects = JSON.parse(sessionStorage.getItem("projects"))
 
-        .then((res) => {
-
-          setTbody(buildTable(res.data))
-        })
-
-        .catch((err) => {
-          console.error(err)
-        })
+      setTbody(buildTable(projects))
+      
+      window.removeEventListener("allData", getProjects)
     }
 
-    getProjects()
+    if (sessionStorage.getItem("projects") != null) getProjects()
+    else {
+      window.addEventListener("allData", getProjects)
+    }
+
+
   }, [])
 
   return (
@@ -114,3 +112,21 @@ function Projects() {
 }
 
 export default Projects
+
+
+
+ // const getProjects = async () => {
+
+    //   await http.get("/projects/all")
+
+    //     .then((res) => {
+
+    //       setTbody(buildTable(res.data))
+    //     })
+
+    //     .catch((err) => {
+    //       console.error(err)
+    //     })
+    // }
+
+    // getProjects()

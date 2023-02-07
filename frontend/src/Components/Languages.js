@@ -1,7 +1,6 @@
+// Languages Component - Creates a table of my competencies for known programming languages.  Uses data in session storage, which should be downloaded via backend.
+
 import React, { useEffect, useState } from 'react'
-
-
-
 
 function Languages() {
 
@@ -55,7 +54,7 @@ function Languages() {
         //keys for child components
         let key2 = 0
 
-        
+
         for (const category in categories) {
             thead.push(<th key={key2++}>{category}</th>)
 
