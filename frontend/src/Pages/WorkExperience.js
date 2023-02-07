@@ -46,7 +46,11 @@ function WorkExperience() {
     //create table body
     const tbody = []
 
+    let odd = true
+
     for (const record in records) {
+
+      const oddXorEven = (odd === true) ? "odd" : "even"
 
       //create table row
       const tr = []
@@ -72,12 +76,14 @@ function WorkExperience() {
       //Location
       tr.push(<td key="location">{records[record].Location}</td>)
 
-      //Description
-      tr.push(<td key="description">{records[record].Description}</td>)
+
 
 
       //push completed table row into table body
-      tbody.push(<tr key={record}>{tr}</tr>)
+      tbody.push(<tr key={record} className={oddXorEven}>{tr}</tr>)
+
+      //Description
+      tbody.push(<tr key={{ record } + "description"} className={oddXorEven}><td colSpan={5}>{records[record].Description}</td></tr>)
     }
     setTbody(<tbody>{tbody}</tbody>)
   }
@@ -92,7 +98,6 @@ function WorkExperience() {
             <th>Title</th>
             <th>Company</th>
             <th>Location</th>
-            <th>Description</th>
           </tr>
         </thead>
         {tbody}
