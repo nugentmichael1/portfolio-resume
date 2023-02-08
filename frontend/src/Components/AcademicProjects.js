@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import http from '../http-common'
 import '../CSS/AcademicProjects.css'
 
 
@@ -75,7 +74,7 @@ function Projects() {
       const projects = JSON.parse(sessionStorage.getItem("projects"))
 
       setTbody(buildTable(projects))
-      
+
       window.removeEventListener("allData", getProjects)
     }
 
@@ -91,12 +90,12 @@ function Projects() {
     <div className='Projects'>
       <table>
         <caption>
-          Academic Projects
+          California State University, Fresno - Projects
         </caption>
         <thead>
           <tr>
             <th>Title</th>
-            <th>Subject</th>
+            <th>Course</th>
             <th>Emphasized Concepts</th>
             {/* <th>Notes</th> */}
             {/* <th>Demo</th> */}

@@ -1,21 +1,28 @@
 .Projects .even {
-    background-color: #e7c9a0;
+    background-color: var(--Pantone2767);
+    ;
 }
 
 .Projects table {
     border-collapse: collapse;
     width: 95%;
-    border: 1px solid black;
+    border: 1px solid var(--PantoneCoolGray7);
+    background-color: var(--Pantone186);
+    color: white;
 }
 
-/* .Projects caption {
-    display: none;
-} */
+.Projects a {
+    color: white;
+}
+
+.Projects caption {
+    /* display: none; */
+    color: black;
+}
 
 .Projects {
     margin: 0;
     padding: 0;
-    background-color: #e7c9a9;
 }
 
 /*For nested lists.  Not used anymore. */

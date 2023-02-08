@@ -1,9 +1,10 @@
 import React from "react";
-import resume from "../Components/MichaelNugentResume.pdf"
+import resume from "../Assets/MichaelNugentResume.pdf"
+import "../CSS/Profile.css"
 
 function Profile() {
     return (
-        <div className='Profile'>
+        <div className='profile'>
             <h1>Michael Nugent</h1>
             <h2>Entry-Level Software Engineer</h2>
             <h3>Summary</h3>
