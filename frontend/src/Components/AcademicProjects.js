@@ -65,7 +65,7 @@ const nestedLists = (composite) => {
 
 function Projects() {
 
-  const [tbody, setTbody] = useState()
+  const [tbody, setTbody] = useState(<tr className="even"><td colSpan={4}>Fetching academic projects data from backend.</td></tr>)
 
   useEffect(() => {
 

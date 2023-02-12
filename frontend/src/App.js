@@ -1,6 +1,6 @@
 //Software Engineering Portfolio 2023
 
-//routes (react links)
+//import routes (links) ability from react
 import { Routes, Route } from 'react-router-dom';
 
 //components
@@ -16,12 +16,12 @@ import Education from './Pages/Education'
 import './CSS/App.css'
 
 //functions
-import retrieveAllData from './Auxiliary/retrieveAllData';
+import retrieveAllData from './Utility/retrieveAllData';
 
 
 
 //Complete download of all data from backend instead of individually as needed.  
-//This will reduce api calls (which cost me money if over google's set limit) from regular users, and challenge nefarious actors who want to abuse the api; they would have to reopen tabs.
+//This will reduce api calls (which cost money if over google's set limit) from regular users, and challenge nefarious actors who want to abuse the api; they would have to reopen tabs.
 const allData = sessionStorage.getItem("allData")
 
 //Check to see if data is already present.  Retrieve if not.

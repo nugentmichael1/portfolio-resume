@@ -43,4 +43,5 @@ const retrieveAllData = async () => {
         })
 }
 
+
 export default retrieveAllData

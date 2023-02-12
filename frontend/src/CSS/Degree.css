@@ -1,5 +1,5 @@
 .degree td {
-    color: var(--Pantone2767);
+    color: var(--Pantone186);
     border-collapse: initial;
 }
 
@@ -11,24 +11,52 @@ td.honors {
     font-style: italic;
 }
 
-/* .degree caption {} */
-
 .degree img {
     height: 15vh;
     width: 15vw;
     object-fit: scale-down;
 }
 
-td.name {
-    color: var(--Pantone2767);
+td#degreeName {
+    color: var(--Pantone186);
+    font-weight: bold;
 }
 
-.school a {
-    /* color: var(--Pantone2767); */
-    color: white;
+#school a {
+    color: var(--Pantone186);
+    text-decoration: none;
+    /* color: white; */
+}
+
+#school a:hover {
+    background-color: white;
 }
 
 table.csuf {
+    background-color: var(--PantoneCoolGray7);
+    border-collapse: collapse;
+    border: 1px solid var(--PantoneCoolGray7)
+}
+
+td.diploma {
+    text-align: center;
+    background-color: white;
+}
+
+.diploma a {
+    color: var(--Pantone186);
+    text-decoration: none;
+}
+
+img#pdfIcon {
+    height: 5vh;
+    width: 5vw;
+}
+
+td.bulldogLogo {
     background-color: var(--Pantone186);
-    border: 1px solid var(--PantoneCoolGray7);
+}
+
+td.info {
+    background-color: var(--Pantone2767);
 }

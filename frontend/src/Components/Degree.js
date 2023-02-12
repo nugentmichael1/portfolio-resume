@@ -3,38 +3,59 @@ import React from 'react'
 import "../CSS/Degree.css"
 import eDiploma from '../Assets/eDiploma.pdf'
 import bulldog from "../Assets/FresnoStateBulldog.png"
+import pdfIcon from "../Assets/pdfIcon.png"
+// import { GrDocumentPdf } from "react-icons/gr"
 
 function Degree() {
     return (
         <div className='degree'>
             <table className='csuf'>
                 <caption>Degree</caption>
-                <a href={eDiploma} target="_blank" rel='noreferrer' title='Click to view eDiploma'>
-                    <tbody>
-                        <tr>
-                            <td rowSpan={5}><img src={bulldog} alt="Fresno State Bulldog Mascot logo" /></td>
-                            <td className='name'>BS Computer Science
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className='school'><a href="https://csm.fresnostate.edu/csci/index.html" target="_blank" rel="noreferrer" title='Fresno State Website'>California State University, Fresno</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className='gradDate'>August 2022
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className='honors'>magna cum laude
-                            </td>
-                        </tr>
-                        {/* <tr>
+
+                <tbody>
+                    <tr>
+
+                        <td id="degreeName" className='info'>BS Computer Science
+                        </td>
+                        {/* <td className='blank'></td> */}
+
+                        <td rowSpan={4} className="bulldogLogo">
+                            <a href="https://csm.fresnostate.edu/csci/index.html" target="_blank" rel="noreferrer" title='Fresno State Website'>
+                                <img src={bulldog} alt="Fresno State Bulldog Mascot logo" />
+                            </a>
+                        </td>
+
+                        <td rowSpan={4} className="diploma">
+
+                            <a href={eDiploma} target="_blank" rel='noreferrer' title='Click to view eDiploma' >
+                                <img id="pdfIcon" src={pdfIcon} alt="pdf file icon" />
+                                <br />
+                                eDiploma
+                                {/* <GrDocumentPdf /> */}
+                            </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td className='info' id="school"><a href="https://csm.fresnostate.edu/csci/index.html" target="_blank" rel="noreferrer" title='Fresno State Website'>
+                            California State University, Fresno
+                        </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className='info' id="gradDate">August 2022
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className='info' id="honors">magna cum laude
+                        </td>
+                    </tr>
+                    {/* <tr>
                             <td className='diploma'>
                                 <a href={eDiploma} target="_blank" rel='noreferrer'>Diploma</a>
                             </td>
                         </tr> */}
-                    </tbody>
-                </a>
+                </tbody>
             </table >
         </div >
     )

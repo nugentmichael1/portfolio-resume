@@ -1,19 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
-const createMonthYearStr = (seconds) => {
-
-  const dateObj = new Date(seconds * 1000)
-
-  const month = dateObj.getMonth()
-
-  const year = dateObj.getFullYear()
-
-  return <>{month}/{year}</>
-}
+import createMonthYearStr from '../Utility/createMonthYearStr'
 
 function WorkExperience() {
 
-  const [tbody, setTbody] = useState(<tbody><tr><td>test</td></tr></tbody>)
+  const [tbody, setTbody] = useState(<tbody><tr><td>Fetching work experience data from backend.</td></tr></tbody>)
 
   useEffect(() => {
 
@@ -83,7 +74,7 @@ function WorkExperience() {
       tbody.push(<tr key={record} className={oddXorEven}>{tr}</tr>)
 
       //Description
-      tbody.push(<tr key={{ record } + "description"} className={oddXorEven}><td colSpan={5}>{records[record].Description}</td></tr>)
+      tbody.push(<tr key={{ record } + "description"} className={oddXorEven}><td className="description" colSpan={5}>&emsp;{records[record].Description}</td></tr>)
     }
     setTbody(<tbody>{tbody}</tbody>)
   }
