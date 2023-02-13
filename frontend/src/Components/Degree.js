@@ -15,9 +15,10 @@ function Degree() {
                 <tbody>
                     <tr>
 
-                        <td id="degreeName" className='info'>BS Computer Science
+                        <td className='info' id="school"><a href="https://csm.fresnostate.edu/csci/index.html" target="_blank" rel="noreferrer" title='Fresno State Website'>
+                            California State University, Fresno
+                        </a>
                         </td>
-                        {/* <td className='blank'></td> */}
 
                         <td rowSpan={4} className="bulldogLogo">
                             <a href="https://csm.fresnostate.edu/csci/index.html" target="_blank" rel="noreferrer" title='Fresno State Website'>
@@ -28,7 +29,7 @@ function Degree() {
                         <td rowSpan={4} className="diploma">
 
                             <a href={eDiploma} target="_blank" rel='noreferrer' title='Click to view eDiploma' >
-                                <img id="pdfIcon" src={pdfIcon} alt="pdf file icon" />
+                                <img id="pdfIcon" src={pdfIcon} alt="pdf file icon" className='pdfIcon' />
                                 <br />
                                 eDiploma
                                 {/* <GrDocumentPdf /> */}
@@ -36,14 +37,13 @@ function Degree() {
                         </td>
 
                     </tr>
+
                     <tr>
-                        <td className='info' id="school"><a href="https://csm.fresnostate.edu/csci/index.html" target="_blank" rel="noreferrer" title='Fresno State Website'>
-                            California State University, Fresno
-                        </a>
+                        <td className='info' id="gradDate">2022
                         </td>
                     </tr>
                     <tr>
-                        <td className='info' id="gradDate">August 2022
+                        <td id="degreeName" className='info'>B.S. Computer Science
                         </td>
                     </tr>
                     <tr>

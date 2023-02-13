@@ -4,3 +4,7 @@
 .profile h2 {
     text-align: center;
 }
+
+.profile ul {
+    margin: 0 2vh;
+}

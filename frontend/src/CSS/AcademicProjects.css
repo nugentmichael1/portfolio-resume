@@ -5,7 +5,7 @@
 
 .Projects table {
     border-collapse: collapse;
-    width: 95%;
+    /* width: 95%; */
     border: 1px solid var(--PantoneCoolGray7);
     background-color: var(--Pantone186);
     color: white;

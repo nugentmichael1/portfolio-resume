@@ -1,6 +1,12 @@
 import React from "react";
-import resume from "../Assets/MichaelNugentResume.pdf"
+
+//css
 import "../CSS/Profile.css"
+
+//assets
+import pdfIcon from "../Assets/pdfIcon.png"
+import resume from "../Assets/MichaelNugentResume.pdf"
+
 
 function Profile() {
     return (
@@ -18,7 +24,7 @@ function Profile() {
                 <li id="location">Irvine, CA</li>
             </ul>
             <h3>Resume</h3>
-            <p><a href={resume} target="_blank" rel="noreferrer">Open/Download</a></p>
+            <p><a href={resume} target="_blank" rel="noreferrer"><img src={pdfIcon} alt="pdf icon" className="pdfIcon" /></a></p>
         </div>
     )
 

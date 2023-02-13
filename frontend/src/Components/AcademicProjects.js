@@ -90,7 +90,7 @@ function Projects() {
     <div className='Projects'>
       <table>
         <caption>
-          California State University, Fresno - Projects
+          Projects
         </caption>
         <thead>
           <tr>

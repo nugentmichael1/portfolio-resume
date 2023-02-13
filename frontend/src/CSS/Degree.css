@@ -7,7 +7,7 @@
     color: white;
 }
 
-td.honors {
+td#honors {
     font-style: italic;
 }
 
@@ -17,10 +17,10 @@ td.honors {
     object-fit: scale-down;
 }
 
-td#degreeName {
-    color: var(--Pantone186);
-    font-weight: bold;
-}
+/* td#degreeName {
+    /* color: var(--Pantone186); */
+/* font-weight: bold; */
+/* } */
 
 #school a {
     color: var(--Pantone186);
@@ -35,7 +35,7 @@ td#degreeName {
 table.csuf {
     background-color: var(--PantoneCoolGray7);
     border-collapse: collapse;
-    border: 1px solid var(--PantoneCoolGray7)
+    border: 1px solid var(--PantoneCoolGray7);
 }
 
 td.diploma {
@@ -48,10 +48,6 @@ td.diploma {
     text-decoration: none;
 }
 
-img#pdfIcon {
-    height: 5vh;
-    width: 5vw;
-}
 
 td.bulldogLogo {
     background-color: var(--Pantone186);
@@ -59,4 +55,8 @@ td.bulldogLogo {
 
 td.info {
     background-color: var(--Pantone2767);
+}
+
+.csuf caption {
+    /* display: none; */
 }

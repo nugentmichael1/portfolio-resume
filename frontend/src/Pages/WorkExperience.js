@@ -1,10 +1,17 @@
+// Work Experience page
+
+//react
 import React, { useEffect, useState } from 'react'
 
+//css
+import "../CSS/WorkExperience.css"
+
+//Utility function to format date
 import createMonthYearStr from '../Utility/createMonthYearStr'
 
 function WorkExperience() {
 
-  const [tbody, setTbody] = useState(<tbody><tr><td>Fetching work experience data from backend.</td></tr></tbody>)
+  const [tbody, setTbody] = useState(<tbody><tr><td colSpan={5}>Fetching work experience data from backend.</td></tr></tbody>)
 
   useEffect(() => {
 
@@ -37,11 +44,10 @@ function WorkExperience() {
     //create table body
     const tbody = []
 
-    let odd = true
-
     for (const record in records) {
 
-      const oddXorEven = (odd === true) ? "odd" : "even"
+      //establish odd or even record (for css class)
+      const oddXorEven = (record % 2 === 0) ? "odd" : "even"
 
       //create table row
       const tr = []
@@ -74,14 +80,20 @@ function WorkExperience() {
       tbody.push(<tr key={record} className={oddXorEven}>{tr}</tr>)
 
       //Description
-      tbody.push(<tr key={{ record } + "description"} className={oddXorEven}><td className="description" colSpan={5}>&emsp;{records[record].Description}</td></tr>)
+      tbody.push(<tr key={record + "description"} className={oddXorEven}><td className="description" colSpan={5}>&emsp;{records[record].Description}</td></tr>)
+
+      //debug
+      // console.log(tbody)
+
     }
+
+
     setTbody(<tbody>{tbody}</tbody>)
   }
 
   return (
     <>
-      <table>
+      <table className='WorkExperience'>
         <thead>
           <tr>
             <th>Start</th>
