@@ -1,3 +1,22 @@
 table.WorkExperience tr.odd {
-    background-color: #e7c9a9;
+    background-color: #9deba4;
 }
+table.WorkExperience tr.even {
+    background-color: #9dd5eb;
+}
+
+table.WorkExperience thead {
+    display: none;
+}
+
+table.WorkExperience td.description {
+    text-align: left;
+}
+
+table.WorkExperience {
+    margin: 0;
+}
+
+/* table.WorkExperience tr {
+    margin: 2vh;
+} */

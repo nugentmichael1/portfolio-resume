@@ -20,7 +20,7 @@ function Profile() {
             <h3>Contact</h3>
             <ul id="contact">
                 <li id="email"><a href="mailto:NugentMichael@live.com">NugentMichael@live.com</a></li>
-                <li id="phone">(949) 293-5705</li>
+                {/* <li id="phone">(949) 293-5705</li> */}
                 <li id="location">Irvine, CA</li>
             </ul>
             <h3>Resume</h3>

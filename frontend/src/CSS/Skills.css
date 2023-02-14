@@ -1,3 +1,18 @@
 .Languages table {
     width: 100%;
+    margin: 0;
+}
+
+/* .Languages h3{
+    margin: 0;
+} */
+
+/* .Languages caption{
+    background-color: yellow;
+    font-weight: bold;
+} */
+
+ul#SoftSkills{
+    list-style-type: disc;
+    padding: 0 4vw;
 }

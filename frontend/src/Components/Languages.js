@@ -78,7 +78,7 @@ function Languages() {
         <div className='Languages'>
             <table>
                 <caption>
-                    Languages
+                    <h3>Languages</h3>
                 </caption>
                 <thead>
                     <tr>
