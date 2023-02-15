@@ -31,3 +31,11 @@
     list-style-type: disc;
     padding: 0 0 0 5vw;
 }
+
+img.gitHubMark {
+    height: 3vh;
+}
+
+/* td.gitHub {
+    background-color: whitesmoke;
+} */

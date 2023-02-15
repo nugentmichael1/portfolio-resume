@@ -1,6 +1,7 @@
 .WorkExperience tr.odd {
     background-color: #9deba4;
 }
+
 .WorkExperience tr.even {
     background-color: #9dd5eb;
 }
@@ -11,9 +12,10 @@
 
 .WorkExperience td.description {
     text-align: left;
+    padding: 0 2vw;
 }
 
-.WorkExperience table{
+.WorkExperience table {
     margin: 0;
 }
 

@@ -45,7 +45,7 @@ const experienceTable = (records) => {
         tbody.push(<tr key={record} className={oddXorEven}>{tr}</tr>)
 
         //Description
-        tbody.push(<tr key={record + "description"} className={oddXorEven}><td className="description" colSpan={5}>&emsp;{records[record].Description}</td></tr>)
+        tbody.push(<tr key={record + "description"} className={oddXorEven}><td className="description" colSpan={5}>{records[record].Description}</td></tr>)
 
     }
 
