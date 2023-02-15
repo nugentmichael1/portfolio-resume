@@ -1,19 +1,19 @@
-table.WorkExperience tr.odd {
+.WorkExperience tr.odd {
     background-color: #9deba4;
 }
-table.WorkExperience tr.even {
+.WorkExperience tr.even {
     background-color: #9dd5eb;
 }
 
-table.WorkExperience thead {
+.WorkExperience thead {
     display: none;
 }
 
-table.WorkExperience td.description {
+.WorkExperience td.description {
     text-align: left;
 }
 
-table.WorkExperience {
+.WorkExperience table{
     margin: 0;
 }
 

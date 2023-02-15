@@ -23,8 +23,11 @@ const retrieveAllData = async () => {
             //languages
             sessionStorage.setItem("languages", JSON.stringify(allData.languages))
 
-            //work experience
-            sessionStorage.setItem("experience", JSON.stringify(allData.experience))
+            //work experience general
+            sessionStorage.setItem("experienceGeneral", JSON.stringify(allData.experience.general))
+
+            //work experience industry
+            sessionStorage.setItem("experienceIndustry",JSON.stringify(allData.experience.industry))
 
             //academic projects
             sessionStorage.setItem("projects", JSON.stringify(allData.projects))
