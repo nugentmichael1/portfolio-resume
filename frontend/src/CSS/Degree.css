@@ -36,6 +36,7 @@ table.csuf {
     background-color: var(--PantoneCoolGray7);
     border-collapse: collapse;
     border: 1px solid var(--PantoneCoolGray7);
+    margin: 0;
 }
 
 td.diploma {

@@ -10,7 +10,7 @@ function Degree() {
     return (
         <div className='degree'>
             <table className='csuf'>
-                <caption>Degree</caption>
+                <caption><h3>Degree</h3></caption>
 
                 <tbody>
                     <tr>
@@ -39,7 +39,7 @@ function Degree() {
                     </tr>
 
                     <tr>
-                        <td className='info' id="gradDate">2022
+                        <td className='info' id="gradDate">2010-2012, 2020-2022
                         </td>
                     </tr>
                     <tr>

@@ -90,7 +90,7 @@ function Projects() {
     <div className='Projects'>
       <table>
         <caption>
-          Projects
+          <h3>Projects</h3>
         </caption>
         <thead>
           <tr>

@@ -9,6 +9,7 @@
     border: 1px solid var(--PantoneCoolGray7);
     background-color: var(--Pantone186);
     color: white;
+    margin: 0;
 }
 
 .Projects a {
