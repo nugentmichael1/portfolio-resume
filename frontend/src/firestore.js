@@ -3,7 +3,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
-//connect to firebase app via credentials, which are stored locally (not in git repository) in .env file.  Can be retrieved from firebase console (online).
+//connect to firebase app via credentials, which are stored locally (not in git repository) in .env file.  Can be retrieved from firebase console (firebase.google.com).
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
