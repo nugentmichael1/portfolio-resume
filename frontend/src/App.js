@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 
 //components
 import NavBar from './Components/NavBar';
+import Footer from './Components/Footer'
 
 //pages
 import Skills from './Pages/Skills'
@@ -43,6 +44,7 @@ function App() {
         <Route path="/Work_Experience" element={<WorkExperience />} />
         <Route path="/Education" element={<Education />} />
       </Routes>
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,14 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    /* background-color: bisque; */
+    width: 100%;
+    /* margin: 0; */
+}
+
+iframe#location {
+    height: 15vh;
+    width: 15vw;
+    border: 0;
+    float: right;
+}

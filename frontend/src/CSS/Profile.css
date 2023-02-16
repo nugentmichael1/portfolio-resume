@@ -8,31 +8,3 @@
 .profile ul {
     margin: 0 2vh;
 }
-
-img#emailIcon {
-    height: 3vh;
-    width: 3vw;
-}
-
-img#phoneIcon {
-    height: 3vh;
-}
-
-img#gitHubMark {
-    height: 3vh;
-    /* width: 3vw; */
-}
-
-/* :root{
-    background-color: yellow;
-} */
-
-table#contact thead {
-    display: none;
-}
-
-iframe#location {
-    height: 15vh;
-    width: 15vw;
-    border: 0;
-}

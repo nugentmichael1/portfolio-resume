@@ -1,0 +1,36 @@
+:root {
+    --contactIconHeight: 3vh;
+    --contactIconWidth: 3vw;
+}
+
+img#emailIcon {
+    height: var(--contactIconHeight);
+    /* width: var(--contactIconWidth); */
+}
+
+img#phoneIcon {
+    height: var(--contactIconHeight);
+    /* width: var(--contactIconWidth); */
+}
+
+img#gitHubMark {
+    height: var(--contactIconHeight);
+    /* width: var(--contactIconWidth); */
+}
+
+img#resumeIcon {
+    height: var(--contactIconHeight);
+    /* width: var(--contactIconWidth); */
+}
+
+table#contact {
+    margin: 0;
+}
+
+table#contact thead {
+    display: none;
+}
+
+table#contact caption {
+    display: none;
+}
