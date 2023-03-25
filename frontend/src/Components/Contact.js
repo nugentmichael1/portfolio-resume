@@ -26,12 +26,24 @@ const Contact = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="mailto:NugentMichael@live.com"><img src={emailIcon} alt="email icon" id="emailIcon" /></a></td>
-                        <td><a href="tel:949-293-5705"><img src={phoneIcon} alt="Call 949-293-5705" id="phoneIcon" /></a></td>
-                        <td><a href="https://github.com/nugentmichael1"><img src={gitHubMark} alt="GitHub Mascot - Click to access my profile." id="gitHubMark" /></a></td>
+                        <td>
+                            <a href="mailto:NugentMichael@live.com">
+                                <img src={emailIcon} alt="email icon" id="emailIcon" title='eMail' />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="tel:949-293-5705">
+                                <img src={phoneIcon} alt="Call 949-293-5705" id="phoneIcon" title='Telephone' />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://github.com/nugentmichael1">
+                                <img src={gitHubMark} alt="GitHub Mascot - Click to access my profile." id="gitHubMark" title='GitHub' />
+                            </a>
+                        </td>
                         <td>
                             <a href={resume} target="_blank" rel="noreferrer">
-                                <img src={resumeIcon} id="resumeIcon" alt='Resume Icon - Click to view resume' />
+                                <img src={resumeIcon} id="resumeIcon" alt='Resume Icon - Click to view resume' title='Resume' />
                             </a>
                         </td>
                     </tr>
