@@ -9,7 +9,7 @@ import Footer from './Components/Footer'
 
 //pages
 import Skills from './Pages/Skills'
-import Profile from './Pages/Profile'
+import Summary from './Pages/Summary'
 import WorkExperience from './Pages/WorkExperience';
 import Education from './Pages/Education'
 
@@ -38,8 +38,8 @@ function App() {
         <Route path="/:page" element={<NavBar />} />
       </Routes>
       <Routes>
-        <Route path="/" element={<Profile myTest={allData} />} />
-        <Route path="/Profile" element={<Profile />} />
+        <Route path="/" element={<Summary myTest={allData} />} />
+        <Route path="/Summary" element={<Summary />} />
         <Route path="/Skills" element={<Skills />} />
         <Route path="/Work_Experience" element={<WorkExperience />} />
         <Route path="/Education" element={<Education />} />
