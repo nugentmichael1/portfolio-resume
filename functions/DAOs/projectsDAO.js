@@ -11,7 +11,7 @@ class ProjectsDAO {
         try {
 
             //debug
-            console.log("Try statement of ProjectsDAO getAll().")
+            // console.log("Try block of ProjectsDAO getAll().")
 
             // Access collection (table) and take snapshot
             const snapshot = await admin.firestore().collection("Projects").get();
