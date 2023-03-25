@@ -10,9 +10,19 @@ function Profile() {
             <h2>Entry-Level Software Engineer</h2>
 
             <h3>Summary</h3>
-            <p id="summary">Recent BS Computer Science graduate with electives in databases, web development, software engineering, and
-                artificial intelligence. Possesses a decade of non-industry work experience. Demonstrates competency with multiple high-quality academic
-                projects.</p>
+            {/* Turn this into sections */}
+            <p id="summary">Recent BS Computer Science graduate demonstrates competency through:
+                <ol>
+                    <li>Education: Multiple high-quality academic
+                        projects:   with electives in databases, web development, software engineering, and
+                        artificial intelligence.
+                    </li>
+
+                    <li>
+                        Decade of general work experience.
+                    </li>
+                </ol>
+            </p>
         </div>
     )
 
