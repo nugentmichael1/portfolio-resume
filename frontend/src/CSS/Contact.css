@@ -1,6 +1,6 @@
 :root {
-    --contactIconHeight: 3vh;
-    --contactIconWidth: 3vw;
+    --contactIconHeight: 5vh;
+    --contactIconWidth: 5vw;
 }
 
 img#emailIcon {
@@ -24,7 +24,7 @@ img#resumeIcon {
 }
 
 table#contact {
-    margin: 0;
+    margin: 0 auto;
 }
 
 table#contact thead {

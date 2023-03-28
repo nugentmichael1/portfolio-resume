@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-const SoftSkills = function(){
+const SoftSkills = function () {
     return (<>
         {/* <table>
             <caption>Soft Skills (table)</caption>
@@ -13,7 +13,7 @@ const SoftSkills = function(){
 
         <h3>Soft Skills</h3>
         <ul id="SoftSkills">
-            <li>Analysis</li>
+            <li>Analysis / Critical Thinking</li>
             <li>Team Work</li>
         </ul>
     </>

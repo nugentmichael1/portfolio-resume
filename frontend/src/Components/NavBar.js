@@ -30,7 +30,7 @@ function NavBar() {
     return (<>
         <nav>
             <ul className='nav'>
-                <NavLink page='Summary' selected={page === 'Summary' || page === undefined} />
+                <NavLink page='Abstract' selected={page === 'Abstract' || page === undefined} />
                 <NavLink page='Education' selected={page === 'Education'} />
                 <NavLink page='Skills' selected={page === 'Skills'} />
                 <NavLink page='Work_Experience' selected={page === 'Work_Experience'} />

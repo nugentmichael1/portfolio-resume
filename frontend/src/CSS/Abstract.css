@@ -1,10 +1,10 @@
 /* CSS for Profile page */
 
-.profile h1,
-.profile h2 {
+.abstract h1,
+.abstract h2 {
     text-align: center;
 }
 
-.profile ul {
+.abstract ul {
     margin: 0 2vh;
 }
