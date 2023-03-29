@@ -50,12 +50,12 @@ function Abstract() {
                             Student Technician
                         </li>
                         <li>
-                            10+ years general/non-industry
+                            10+ years non-industry
                         </li>
                     </ul>
                 </li>
             </ol>
-            <p id="summary">Michael Nugent is a powerful asset to</p>
+            <p id="summary">Michael Nugent is an inquisitive, diligent, and hungry asset ready to deliver</p>
         </div >
     )
 
