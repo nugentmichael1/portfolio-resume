@@ -13,7 +13,8 @@ const SoftSkills = function () {
 
         <h3>Soft Skills</h3>
         <ul id="SoftSkills">
-            <li>Analysis / Critical Thinking</li>
+            <li>Analysis / Critical Thinking / Problem Solving / Logical Reasoning</li>
+            {/* <li>Research</li> */}
             <li>Team Work</li>
         </ul>
     </>

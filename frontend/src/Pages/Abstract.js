@@ -13,7 +13,8 @@ function Abstract() {
             {/* <h3>Summary</h3> */}
 
             {/* Michael Nugent demonstrates his competency as an associate software engineer through three areas: */}
-            <p id="introduction">As a 35 year-old, recent college graduate, Nugent's strengths reside within his:</p>
+            {/* As a recent college graduate with limited industry experience,  */}
+            <p id="introduction">Michael Nugent's qualifications for entry-level software engineer work are his:</p>
             <ol>
                 <li>
                     <Link to={'/Education'}>
