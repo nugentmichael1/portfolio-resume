@@ -37,7 +37,7 @@ const Contact = () => {
                             </a>
                         </td>
                         <td>
-                            <a href="https://github.com/nugentmichael1">
+                            <a href="https://github.com/nugentmichael1" target="_blank" rel="noreferrer">
                                 <img src={gitHubMark} alt="GitHub Mascot - Click to access my profile." id="gitHubMark" title='GitHub' />
                             </a>
                         </td>

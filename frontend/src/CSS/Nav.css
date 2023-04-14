@@ -1,18 +1,30 @@
 Nav {
-    background-color: blue;
-    color: chocolate;
+    background-image: linear-gradient(var(--DarkBlue), var(--DarkOlive));
+    /* color: black; */
     margin: 0;
     padding: 0;
     text-align: left;
     font-size: large;
+    top: 0;
+    /* position: fixed; */
 }
 
 Nav .NavLink-Active li {
-    background-color: #e7c9a9;
+    background-color: white;
+    color: black;
+    background-image: none;
+    /* border: 1px white solid; */
 }
 
-.NavLink {
-    color: darkgoldenrod;
+/* Nav .NavLink-Active li:hover {
+    border: 1px white solid;
+} */
+
+.NavLink li:hover {
+    color: black;
+    background-color: white;
+    background-image: none;
+    /* border-right: 1px solid black; */
 }
 
 Nav a {
@@ -20,14 +32,20 @@ Nav a {
 }
 
 Nav ul {
-    background-color: white;
+    /* background-color: black; */
     /*overflow allows background to appear in conjuction with child floats*/
     overflow: auto;
+    /* border: 1px solid black; */
 }
 
 Nav li {
-    background-color: #e7c9a0;
-    padding: 2vh 2vw;
+    color: white;
+    background-image: linear-gradient(var(--DarkBlue), var(--DarkOlive));
+    background-color: var(--DarkBlue);
+    padding: 2vh 1vw;
     float: left;
-    border-radius: 20px 20px 0 0;
+    /* border-radius: 20px 20px 0 0; */
+    /* border: 1px white solid; */
+    border-right: 1px white solid;
+    /* border-bottom: 1px white solid; */
 }

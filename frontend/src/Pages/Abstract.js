@@ -14,7 +14,7 @@ function Abstract() {
 
             {/* Michael Nugent demonstrates his competency as an associate software engineer through three areas: */}
             {/* As a recent college graduate with limited industry experience,  */}
-            <p id="introduction">Michael Nugent's qualifications for entry-level software engineer work are his:</p>
+            <p id="introduction">Michael Nugent's qualifications for associate software engineer work are his:</p>
             <ol>
                 <li>
                     <Link to={'/Education'}>
@@ -56,7 +56,9 @@ function Abstract() {
                     </ul>
                 </li>
             </ol>
-            <p id="summary">Michael Nugent is an inquisitive, diligent, and hungry asset ready to deliver</p>
+            <p id="summary">
+                {/* Michael Nugent is an inquisitive, diligent, and hungry asset ready to deliver */}
+            </p>
         </div >
     )
 

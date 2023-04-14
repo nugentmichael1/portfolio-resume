@@ -1,6 +1,13 @@
-html{
+:root {
+    /*Nav colors*/
+    --DarkBlue: #050A30;
+    --DarkOlive: #2b3618;
+}
+
+html {
     background-color: white;
 }
+
 ul {
     list-style-type: none;
     padding: 0;

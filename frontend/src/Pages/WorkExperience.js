@@ -21,25 +21,3 @@ function WorkExperience() {
 }
 
 export default WorkExperience
-
-
-
- // const retrieveWorkExperience = async () => {
-    //   await http.get("experience/all")
-    //     .then((res) => {
-
-    //       //debug
-    //       // console.log(res.data)
-
-    //       buildTable(res.data)
-
-    //       return
-    //     })
-    //     .catch((error) => {
-
-    //       console.error(`Failed to acquire work experience data: ${error}`)
-
-    //       return
-    //     })
-    // }
-    // retrieveWorkExperience()

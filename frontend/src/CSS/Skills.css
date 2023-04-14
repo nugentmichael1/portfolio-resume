@@ -1,6 +1,13 @@
+/* Skills Page CSS*/
+
+.Skills table {
+    border: 1px solid black;
+}
+
 .Languages table {
-    width: 100%;
+    /* width: 100%; */
     margin: 0;
+    display: inline-table;
 }
 
 /* .Languages h3{
@@ -12,7 +19,23 @@
     font-weight: bold;
 } */
 
-ul#SoftSkills{
-    list-style-type: disc;
-    padding: 0 4vw;
+ul#SoftSkills li {
+    float: left;
+    margin-left: 1vw;
+}
+
+ul#SoftSkills li.odd {
+    background-color: #9deba4;
+}
+
+ul#SoftSkills li.even {
+    background-color: #9dd5eb;
+}
+
+
+
+#WebDevelopment,
+#SoftwareEngineering,
+#SoftSkills {
+    display: inline-table;
 }

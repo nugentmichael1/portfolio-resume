@@ -1,8 +1,10 @@
 import React from 'react'
 
 // Components
-import Languages from '../Components/Languages'
-import SoftSkills from '../Components/SoftSkills'
+import Languages from '../Components/Skills/Languages'
+import Soft from '../Components/Skills/Soft'
+import WebDevelopment from '../Components/Skills/WebDevelopment'
+import SoftwareEngineering from '../Components/Skills/SoftwareEngineering'
 
 // CSS
 import '../CSS/Skills.css'
@@ -12,7 +14,9 @@ function Skills() {
         <div className='Skills'>
             {/* <h1>Skills</h1> */}
             <Languages />
-            <SoftSkills />
+            <WebDevelopment />
+            <SoftwareEngineering />
+            <Soft />
         </div>
     )
 }

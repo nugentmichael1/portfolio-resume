@@ -6,5 +6,18 @@
 }
 
 .abstract ul {
+    /* text-align: center; */
     margin: 0 2vh;
+}
+
+.abstract ol {
+    /* text-align: center; */
+}
+
+.abstract li {
+    /* text-align: center; */
+}
+
+.abstract p {
+    /* text-align: center; */
 }
