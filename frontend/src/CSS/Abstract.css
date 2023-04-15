@@ -3,6 +3,13 @@
 .abstract h1,
 .abstract h2 {
     text-align: center;
+    background: -webkit-linear-gradient(45deg, var(--DarkBlue), white);
+    background-color: #050A30;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }
 
 .abstract ul {

@@ -21,15 +21,63 @@ const buildList = (dataArr) => {
     return li
 }
 
-const Soft = function () {
+const buildTRows = (list) => {
 
+
+    let oddXorEven = 'odd'
+
+    const rows = []
+    for (let j = 0; j < list.length / 3; j++) {
+
+        const td = []
+
+        for (let i = 0; i < 3; i++) {
+            td.push(
+                <td key={list[i + j]} className={oddXorEven}>{list[i + j]}</td>
+            )
+            oddXorEven = (oddXorEven === 'odd') ? 'even' : 'odd'
+        }
+        rows.push(
+            <tr key={j}>
+                {td}
+            </tr>
+        )
+    }
+
+    return rows
+}
+
+const Soft = function () {
 
     return (<>
 
-        <h3>Soft</h3>
-        <ul id="SoftSkills">
-            {buildList(sSData)}
-        </ul>
+        <table id="Soft">
+            <caption>
+                <h3>
+                    Common
+                </h3>
+            </caption>
+            <tbody>
+                {buildTRows(sSData)}
+                {/* <tr>
+                    <td>
+                        {buildList(sSData)}
+                    </td>
+                </tr> */}
+            </tbody>
+        </table>
+
+        {/* <figure id="Soft">
+            <figcaption>
+                <h3>
+                    Common
+                </h3>
+            </figcaption>
+            <ul>
+                {buildList(sSData)}
+            </ul>
+        </figure> */}
+
     </>
     )
 }

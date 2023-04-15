@@ -2,12 +2,56 @@
 
 .Skills table {
     border: 1px solid black;
+    /* background-color: blue; */
+    /* float: left; */
+    border-spacing: 1vw;
+    border-collapse: separate;
+    display: inline-table;
+    margin: 0 2vw;
 }
+
+table#Soft td.odd {
+    background-color: var(--Odd);
+}
+
+table#Soft td.even {
+    background-color: var(--Even);
+}
+
+.Skills th,
+.Skills td {
+    /* padding: 0 1vw; */
+}
+
+/* .Skills th.odd,
+.Skills td.odd {
+    background-color: var(--Odd);
+}
+
+.Skills th.even,
+.Skills td.even {
+    background-color: var(--Even);
+} */
+
+
+.Skills li.odd {
+    background-color: var(--Odd);
+}
+
+.Skills li.even {
+    background-color: var(--Even);
+}
+
+/* .Skills figure {
+    border: 1px solid black;
+    margin: 0;
+    padding:0;
+} */
 
 .Languages table {
     /* width: 100%; */
-    margin: 0;
-    display: inline-table;
+    /* margin: 0; */
+    /* display: inline-table; */
 }
 
 /* .Languages h3{
@@ -19,23 +63,30 @@
     font-weight: bold;
 } */
 
-ul#SoftSkills li {
+#Soft li {
     float: left;
     margin-left: 1vw;
 }
 
-ul#SoftSkills li.odd {
-    background-color: #9deba4;
+#Soft li.odd {
+    background-color: var(--Odd);
 }
 
-ul#SoftSkills li.even {
-    background-color: #9dd5eb;
+#Soft li.even {
+    background-color: var(--Even);
 }
 
 
 
+#Languages,
 #WebDevelopment,
 #SoftwareEngineering,
-#SoftSkills {
-    display: inline-table;
+#Soft {
+    /* margin: 0 2vw; */
+    /* float: left; */
 }
+
+/* 
+#Soft {
+    display: inline-table;
+} */

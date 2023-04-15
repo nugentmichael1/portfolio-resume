@@ -1,9 +1,9 @@
 .WorkExperience tr.odd {
-    background-color: #9deba4;
+    background-color: var(--Odd);
 }
 
 .WorkExperience tr.even {
-    background-color: #9dd5eb;
+    background-color: var(--Even);
 }
 
 .WorkExperience thead {

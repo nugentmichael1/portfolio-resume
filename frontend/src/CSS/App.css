@@ -1,11 +1,24 @@
-:root {
+html {
     /*Nav colors*/
     --DarkBlue: #050A30;
     --DarkOlive: #2b3618;
+
+    --Odd: #9deba4;
+    --Even: #9dd5eb;
+
+    background-color: white;
+    height: 100%;
+
 }
 
-html {
-    background-color: white;
+body {
+    min-height: 100%;
+}
+
+#root {
+    /* background-color: blue; */
+    /* margin-bottom: 7vh; */
+    height: 100%;
 }
 
 ul {

@@ -24,7 +24,14 @@ img#resumeIcon {
 }
 
 table#contact {
-    margin: 0 auto;
+    margin: 4vh auto 0 auto;
+    /* border-spacing: 3vh; */
+    /* border-collapse: separate; */
+
+}
+
+table#contact td {
+    padding: 1vh 4vw;
 }
 
 table#contact thead {

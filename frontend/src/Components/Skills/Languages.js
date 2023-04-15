@@ -54,17 +54,27 @@ function Languages() {
         //keys for child components
         let key2 = 0
 
+        //odd or even class
+        let oddXorEven = 'odd'
+
 
         for (const category in categories) {
-            thead.push(<th key={key2++}>{category}</th>)
+            thead.push(<th key={key2++} className={oddXorEven}>{category}</th>)
 
             const titles = []
             let key1 = 0
+
+            let oddXorEven2 = 'odd'
+
             categories[category].forEach(title => {
-                titles.push(<li key={key1++}>{title}</li>)
+                titles.push(<li key={key1++} className={oddXorEven2}>{title}</li>)
+
+                oddXorEven2 = (oddXorEven2 === 'odd') ? 'even' : 'odd';
             })
 
-            row.push(<td key={key2}><ul key={key2++}>{titles}</ul></td>)
+            row.push(<td key={key2} className={oddXorEven}><ul key={key2++}>{titles}</ul></td>)
+
+            oddXorEven = (oddXorEven === 'odd') ? 'even' : 'odd';
         }
 
         //use state functions to dynamically change table header and row
@@ -75,23 +85,22 @@ function Languages() {
 
     return (
         // {table}
-        <div className='Languages'>
-            <table>
-                <caption>
-                    <h3>Languages</h3>
-                </caption>
-                <thead>
-                    <tr>
-                        {thead}
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        {row}
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+
+        <table id='Languages'>
+            <caption>
+                <h3>Languages</h3>
+            </caption>
+            <thead>
+                <tr>
+                    {thead}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {row}
+                </tr>
+            </tbody>
+        </table>
     )
 }
 

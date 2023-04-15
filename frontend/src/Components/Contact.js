@@ -5,6 +5,7 @@ import React from 'react'
 import emailIcon from "../Assets/emailIcon.png"
 import phoneIcon from "../Assets/phoneIcon.png"
 import gitHubMark from "../Assets/github-mark.png"
+import gitHubMarkWhite from "../Assets/github-mark-white.png"
 import resumeIcon from "../Assets/resumeIcon.png"
 import resume from "../Assets/MichaelNugentResume.pdf"
 
@@ -38,7 +39,7 @@ const Contact = () => {
                         </td>
                         <td>
                             <a href="https://github.com/nugentmichael1" target="_blank" rel="noreferrer">
-                                <img src={gitHubMark} alt="GitHub Mascot - Click to access my profile." id="gitHubMark" title='GitHub' />
+                                <img src={gitHubMarkWhite} alt="GitHub Mascot - Click to access my profile." id="gitHubMark" title='GitHub' />
                             </a>
                         </td>
                         <td>

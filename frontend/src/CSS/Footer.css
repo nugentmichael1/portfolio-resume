@@ -1,7 +1,8 @@
 footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
-    background-color: var(--DarkBlue);
+    /* background-color: var(--DarkBlue); */
+    background-image: linear-gradient(white, var(--DarkBlue));
     width: 100%;
     /* margin: 0; */
 }
