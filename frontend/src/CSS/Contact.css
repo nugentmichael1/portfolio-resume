@@ -1,6 +1,6 @@
 :root {
-    --contactIconHeight: 5vh;
-    --contactIconWidth: 5vw;
+    --contactIconHeight: 7vh;
+    --contactIconWidth: 7vw;
 }
 
 img#emailIcon {
@@ -24,14 +24,14 @@ img#resumeIcon {
 }
 
 table#contact {
-    margin: 4vh auto 0 auto;
+    margin: 2vh auto;
     /* border-spacing: 3vh; */
     /* border-collapse: separate; */
 
 }
 
 table#contact td {
-    padding: 1vh 4vw;
+    padding: 0vh 4vw;
 }
 
 table#contact thead {
