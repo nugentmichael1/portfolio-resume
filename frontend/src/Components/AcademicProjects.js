@@ -1,5 +1,6 @@
 //Academic Projects component: table
 
+import Carousel from "./Carousel"
 
 //react
 import React, { useEffect, useState } from 'react'
@@ -54,6 +55,7 @@ function Projects() {
           {tbody}
         </tbody>
       </table>
+      <Carousel />
     </div>
   )
 }

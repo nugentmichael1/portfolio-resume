@@ -14,7 +14,7 @@ function Abstract() {
 
             {/* Michael Nugent demonstrates his competency as an associate software engineer through three areas: */}
             {/* As a recent college graduate with limited industry experience,  */}
-            <p id="introduction">Michael Nugent's qualifications for associate software engineer work are his:</p>
+            <p id="introduction">Qualifications are divided into three categories:</p>
             <ol>
                 <li>
                     <Link to={'/Education'}>
@@ -25,7 +25,7 @@ function Abstract() {
                             BS Computer Science degree
                         </li>
                         <li>
-                            Multiple high-quality academic projects.
+                            Multiple high-quality academic projects
                         </li>
                     </ul>
                 </li>
@@ -35,10 +35,16 @@ function Abstract() {
                     </Link>
                     <ul>
                         <li>
-                            Programming languages
+                            Programming Languages
                         </li>
                         <li>
-                            General traits
+                            Web Development
+                        </li>
+                        <li>
+                            Software Engineering
+                        </li>
+                        <li>
+                            Soft Skills
                         </li>
                     </ul>
                 </li>

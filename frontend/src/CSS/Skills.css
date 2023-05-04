@@ -10,30 +10,6 @@
     margin: 0 2vw;
 }
 
-table#Soft td.odd {
-    background-color: var(--Odd);
-}
-
-table#Soft td.even {
-    background-color: var(--Even);
-}
-
-.Skills th,
-.Skills td {
-    /* padding: 0 1vw; */
-}
-
-/* .Skills th.odd,
-.Skills td.odd {
-    background-color: var(--Odd);
-}
-
-.Skills th.even,
-.Skills td.even {
-    background-color: var(--Even);
-} */
-
-
 .Skills li.odd {
     background-color: var(--Odd);
 }
@@ -41,52 +17,3 @@ table#Soft td.even {
 .Skills li.even {
     background-color: var(--Even);
 }
-
-/* .Skills figure {
-    border: 1px solid black;
-    margin: 0;
-    padding:0;
-} */
-
-.Languages table {
-    /* width: 100%; */
-    /* margin: 0; */
-    /* display: inline-table; */
-}
-
-/* .Languages h3{
-    margin: 0;
-} */
-
-/* .Languages caption{
-    background-color: yellow;
-    font-weight: bold;
-} */
-
-#Soft li {
-    float: left;
-    margin-left: 1vw;
-}
-
-#Soft li.odd {
-    background-color: var(--Odd);
-}
-
-#Soft li.even {
-    background-color: var(--Even);
-}
-
-
-
-#Languages,
-#WebDevelopment,
-#SoftwareEngineering,
-#Soft {
-    /* margin: 0 2vw; */
-    /* float: left; */
-}
-
-/* 
-#Soft {
-    display: inline-table;
-} */

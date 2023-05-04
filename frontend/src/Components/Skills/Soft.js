@@ -1,36 +1,16 @@
 // Soft - Sub component of Skills component
 
 import React from 'react'
+import buildSkillsTBody from '../../Utility/buildSkillsTBody'
 
-const sSData = ["Teamwork", "Problem Solving", "Communication", "Critical Thinking", "Interpersonal", "Time management"]
+const sSData = {
+    "People":["Teamwork", "Communication",  "Interpersonal"],
+    "Logic":["Problem Solving", "Critical Thinking", "Analysis"], 
+    "Utility": ["Time Management"]
+}
 // Analysis, Logical reasoning
 
 
-const buildTRows = (list) => {
-
-
-    let oddXorEven = 'odd'
-
-    const rows = []
-    for (let j = 0; j < list.length / 3; j++) {
-
-        const td = []
-
-        for (let i = 0; i < 3; i++) {
-            td.push(
-                <td key={list[i + j]} className={oddXorEven}>{list[i + j]}</td>
-            )
-            oddXorEven = (oddXorEven === 'odd') ? 'even' : 'odd'
-        }
-        rows.push(
-            <tr key={j}>
-                {td}
-            </tr>
-        )
-    }
-
-    return rows
-}
 
 const Soft = function () {
 
@@ -39,17 +19,14 @@ const Soft = function () {
         <table id="Soft">
             <caption>
                 <h3>
-                    Common
+                    Soft Skills
                 </h3>
             </caption>
-            <tbody>
+                {buildSkillsTBody(sSData)}
+            {/* <tbody>
                 {buildTRows(sSData)}
-                {/* <tr>
-                    <td>
-                        {buildList(sSData)}
-                    </td>
-                </tr> */}
-            </tbody>
+    
+            </tbody> */}
         </table>
 
         {/* <figure id="Soft">
@@ -85,3 +62,29 @@ export default Soft
     
     //     return li
     // }
+
+
+// const buildTRows = (list) => {
+
+//     let oddXorEven = 'odd'
+
+//     const rows = []
+//     for (let j = 0; j < list.length / 3; j++) {
+
+//         const td = []
+
+//         for (let i = 0; i < 3; i++) {
+//             td.push(
+//                 <td key={list[i + (j*3)]} className={oddXorEven}>{list[i + (j*3)]}</td>
+//             )
+//             oddXorEven = (oddXorEven === 'odd') ? 'even' : 'odd'
+//         }
+//         rows.push(
+//             <tr key={j}>
+//                 {td}
+//             </tr>
+//         )
+//     }
+
+//     return rows
+// }
