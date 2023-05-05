@@ -37,7 +37,7 @@ img.gitHubMark {
 
 .carousel {
     margin: 1vh auto;
-    display: grid;
+    /* display: grid; */
     /* background-color: yellow; */
     text-align: center;
     /* grid-template-columns: 30vw 10vw 10vw; */
@@ -51,6 +51,9 @@ img.gitHubMark {
 .carousel-item1 {
     grid-column: 1;
     grid-row: 1/4;
+
+    -webkit-mask: linear-gradient(yellow, brown);
+    mask: linear-gradient(yellow, brown);
 }
 
 .carousel-item2 {
@@ -70,4 +73,30 @@ img.gitHubMark {
 
 video {
     display: block;
+    -webkit-mask-image: linear-gradient(yellow, blue);
+    mask-image: linear-gradient(yellow, blue);
+}
+
+#puzzleMask {
+    /* -webkit-mask-image: linear-gradient(to bottom, #000, #000); */
+    mask-image: linear-gradient(to bottom, #fff, #fff),
+        linear-gradient(to bottom, #fff, #fff),
+        linear-gradient(to bottom, #fff, #fff),
+        linear-gradient(to bottom, #fff, #fff),
+        linear-gradient(to bottom, #fff, #fff);
+    mask-size: 18% 70%;
+    mask-position: 0 100%, 25% 25%, 50% 50%, 75% 0, 100% 50%;
+    mask-repeat: no-repeat;
+    /* -webkit-mask-image: url("../Assets/FresnoStateBulldog.png");
+    mask-image: url("../Assets/FresnoStateBulldog.png") */
+}
+
+.bulldogMask {
+    -webkit-mask-image: linear-gradient(yellow, transparent);
+    mask-image: linear-gradient(yellow, transparent);
+}
+
+#bulldogExperiment {
+    -webkit-mask-image: linear-gradient(yellow, blue);
+    mask-image: linear-gradient(yellow, blue);
 }
