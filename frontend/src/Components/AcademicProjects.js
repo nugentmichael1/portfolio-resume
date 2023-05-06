@@ -16,16 +16,17 @@ import projectsTable from '../Utility/projectsTable'
 import CarouselCaption from './CarouselCaption'
 
 //videos
-import puzzleSliderClip from "../Assets/15PuzzleClip.mp4"
-import gomoku from "../Assets/GomokuDemo.mp4"
-import auctioneer from "../Assets/AuctioneerDemo.mp4"
-import nQueens from "../Assets/NQueensDemo.mp4"
+import puzzleSliderClip from "../Assets/Videos/15PuzzleClip.mp4"
+import gomoku from "../Assets/Videos/GomokuDemo.mp4"
+import auctioneer from "../Assets/Videos/AuctioneerDemo.mp4"
+import nQueens from "../Assets/Videos/NQueensDemo.mp4"
+import roadMap from "../Assets/Videos/RoadMapDemo.mp4"
 
 //image - delete when done
 import bulldog from "../Assets/FresnoStateBulldog.png"
 
 
-const videos = [auctioneer, "roadmap", puzzleSliderClip, nQueens, gomoku]
+const videos = [auctioneer, roadMap, puzzleSliderClip, nQueens, gomoku]
 
 function buildCarousel(data) {
 
