@@ -10,7 +10,7 @@ import Carousel from "react-bootstrap/Carousel"
 import '../CSS/AcademicProjects.css'
 
 //utility
-import projectsTable from '../Utility/projectsTable'
+// import projectsTable from '../Utility/projectsTable'
 
 //Components
 import CarouselCaption from './CarouselCaption'
@@ -22,11 +22,9 @@ import auctioneer from "../Assets/Videos/AuctioneerDemo.mp4"
 import nQueens from "../Assets/Videos/NQueensDemo.mp4"
 import roadMap from "../Assets/Videos/RoadMapDemo.mp4"
 
-//image - delete when done
-import bulldog from "../Assets/FresnoStateBulldog.png"
 
-
-const videos = [auctioneer, roadMap, puzzleSliderClip, nQueens, gomoku]
+//sw2=software engineering 2; sss=state space search; ea= evolutionary algorithms; wd=web development
+const videos = { sockets: auctioneer, sw2: roadMap, sss: puzzleSliderClip, ea: nQueens, wd: gomoku }
 
 function buildCarousel(data) {
 
@@ -35,12 +33,10 @@ function buildCarousel(data) {
 
   data.forEach((project, i) => {
 
-    console.log(videos[i])
-
     carouselItems.push(
       < Carousel.Item key={project.Title}>
         <video controls={false} autoPlay loop muted>
-          <source src={videos[i]} type="video/mp4" />
+          <source src={videos[project.clipName]} type="video/mp4" />
         </video>
         <Carousel.Caption>
           <CarouselCaption title={project.Title} repository={project.GitHub} presentation={project.Demo} app={project.app} />
@@ -67,7 +63,7 @@ function Projects() {
 
       const projects = JSON.parse(sessionStorage.getItem("projects"))
 
-      console.log(projects)
+      // console.log(projects)
 
       setContent(buildCarousel(projects))
 
@@ -84,7 +80,7 @@ function Projects() {
 
   return (
     <div className='Projects'>
-      <h3>Projects</h3>
+      <h3 id='projectsCaption'>Projects</h3>
       {content}
       {/* <table>
         <caption>
