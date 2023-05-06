@@ -4,22 +4,23 @@ import puzzleSliderClip from "../Assets/15PuzzleClip.mp4"
 
 function Carousel() {
     return (
-        <div className='carousel'>
-            <div className='carousel-item1'>
-                <video width={"560"} height={"315"} className='video' controls loop autoPlay muted>
-                    <source src={puzzleSliderClip} type="video/mp4" />
-                </video>
-            </div>
-            <div className='carousel-item2'>
-                Video Presentation
-            </div>
-            <div className='carousel-item3'>
-                Live Demo
-            </div>
-            <div className='carousel-item4'>
-                Repository
-            </div>
-        </div >
+        
+            {/* <div className='carousel'>
+                <div className='carousel-item1'>
+                    <video width={"560"} height={"315"} className='video' controls loop autoPlay muted>
+                        <source src={puzzleSliderClip} type="video/mp4" />
+                    </video>
+                </div>
+                <div className='carousel-item2'>
+                    Video Presentation
+                </div>
+                <div className='carousel-item3'>
+                    Live Demo
+                </div>
+                <div className='carousel-item4'>
+                    Repository
+                </div>
+            </div > */}
     )
 }
 

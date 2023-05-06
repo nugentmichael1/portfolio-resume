@@ -79,3 +79,8 @@ h1 {
 h2 {
     font-size: 2.5vh;
 }
+
+/* Counteract Bootstrap's default table caption */
+caption {
+    caption-side: top;
+}
