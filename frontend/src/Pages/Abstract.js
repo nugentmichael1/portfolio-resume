@@ -14,7 +14,8 @@ function Abstract() {
 
             {/* Michael Nugent demonstrates his competency as an associate software engineer through three areas: */}
             {/* As a recent college graduate with limited industry experience,  */}
-            <p id="introduction">Qualifications are divided into three categories:</p>
+            {/* <p id="introduction">Qualifications:</p> */}
+            <h3>Qualifications:</h3>
             <ol>
                 <li>
                     <Link to={'/Education'}>
@@ -22,10 +23,10 @@ function Abstract() {
                     </Link>
                     <ul>
                         <li>
-                            BS Computer Science degree
+                            BS Computer Science
                         </li>
                         <li>
-                            Multiple high-quality academic projects
+                            Academic Projects
                         </li>
                     </ul>
                 </li>
