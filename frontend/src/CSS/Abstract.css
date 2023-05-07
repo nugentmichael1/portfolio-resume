@@ -17,6 +17,7 @@
     margin: 0 2vh;
 }
 
-.abstract {
+#qualifications {
     margin: 0 auto;
+    width: max-content;
 }

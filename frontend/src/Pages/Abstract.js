@@ -15,54 +15,57 @@ function Abstract() {
             {/* Michael Nugent demonstrates his competency as an associate software engineer through three areas: */}
             {/* As a recent college graduate with limited industry experience,  */}
             {/* <p id="introduction">Qualifications:</p> */}
-            <h3>Qualifications:</h3>
-            <ol>
-                <li>
-                    <Link to={'/Education'}>
-                        Education
-                    </Link>
-                    <ul>
-                        <li>
-                            BS Computer Science
-                        </li>
-                        <li>
-                            Academic Projects
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <Link to={'/Skills'}>
-                        Skills
-                    </Link>
-                    <ul>
-                        <li>
-                            Programming Languages
-                        </li>
-                        <li>
-                            Web Development
-                        </li>
-                        <li>
-                            Software Engineering
-                        </li>
-                        <li>
-                            Soft Skills
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <Link to={'/Work_Experience'}>
-                        Work Experience
-                    </Link >
-                    <ul>
-                        <li>
-                            Student Technician
-                        </li>
-                        <li>
-                            10+ years non-industry
-                        </li>
-                    </ul>
-                </li>
-            </ol>
+            <div id="qualifications">
+                <h3>Qualifications</h3>
+                <ol>
+                    <li>
+                        <Link to={'/Education'}>
+                            Education
+                        </Link>
+                        <ul>
+                            <li>
+                                BS Computer Science
+                            </li>
+                            <li>
+                                Academic Projects
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <Link to={'/Skills'}>
+                            Skills
+                        </Link>
+                        <ul>
+                            <li>
+                                Programming Languages
+                            </li>
+                            <li>
+                                Web Development
+                            </li>
+                            <li>
+                                Software Engineering
+                            </li>
+                            <li>
+                                Soft Skills
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <Link to={'/Work_Experience'}>
+                            Work Experience
+                        </Link >
+                        <ul>
+                            <li>
+                                Student Technician
+                            </li>
+                            <li>
+                                10+ years non-industry
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
             <p id="summary">
                 {/* Michael Nugent is an inquisitive, diligent, and hungry asset ready to deliver */}
             </p>
