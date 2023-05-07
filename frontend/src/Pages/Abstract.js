@@ -16,7 +16,7 @@ function Abstract() {
             {/* As a recent college graduate with limited industry experience,  */}
             {/* <p id="introduction">Qualifications:</p> */}
             <div id="qualifications">
-                <h3>Qualifications</h3>
+                {/* <h3>Qualifications</h3> */}
                 <ol>
                     <li>
                         <Link to={'/Education'}>

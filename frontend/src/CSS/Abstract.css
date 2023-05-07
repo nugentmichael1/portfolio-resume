@@ -18,6 +18,10 @@
 }
 
 #qualifications {
-    margin: 0 auto;
+    margin: 5vh auto;
     width: max-content;
+}
+
+.abstract h3 {
+    text-align: center;
 }

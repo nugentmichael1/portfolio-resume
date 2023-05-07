@@ -13,7 +13,7 @@ import webApp from "../Assets/webAppDark.png"
 function CarouselCaption({ title, presentation, app, repository }) {
     // console.log(presentation, app, repository)
 
-    console.log(presentation)
+    // console.log(presentation)
 
     const videoPresentationLi = (presentation === "") ? null :
         <li>
