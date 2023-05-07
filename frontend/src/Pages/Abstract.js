@@ -4,10 +4,14 @@ import { Link } from "react-router-dom"
 //css
 import "../CSS/Abstract.css"
 
+import MaskExperiment from "../Components/MaskExperiment"
+import "../CSS/MaskExperiment.css"
+
 function Abstract() {
     return (
         <div className='abstract'>
-            <h1>Michael Nugent</h1>
+            {/* <h1>Michael Nugent</h1> */}
+            <MaskExperiment />
             <h2>Associate Software Engineer</h2>
 
             {/* <h3>Summary</h3> */}

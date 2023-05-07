@@ -1,4 +1,3 @@
-
 .videoMaskWrapper {
     position: relative;
     width: 100vw;
@@ -14,6 +13,9 @@
 
 svg {
     position: relative;
+    width: 100%;
+    vertical-align: bottom;
+    margin: 0 auto;
 }
 
 text {
