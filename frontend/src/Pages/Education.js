@@ -7,16 +7,12 @@ import React from 'react'
 import "../CSS/Education.css"
 
 //Components
-import AcademicProjects from '../Components/AcademicProjects'
 import Degree from "../Components/Degree"
 
 const Education = () => {
 
     return (<div className='education'>
         <Degree />
-
-        <AcademicProjects />
-
     </div>
     )
 }

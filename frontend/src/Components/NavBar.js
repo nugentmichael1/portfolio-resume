@@ -29,8 +29,8 @@ function NavBar() {
 
     return (<>
         <nav>
-            <ul className='nav'>
-                <NavLink page='Abstract' selected={page === 'Abstract' || page === undefined} />
+            <ul id='navUL'>
+                <NavLink page='Projects' selected={page === 'Projects' || page === undefined} />
                 <NavLink page='Education' selected={page === 'Education'} />
                 <NavLink page='Skills' selected={page === 'Skills'} />
                 <NavLink page='Work_Experience' selected={page === 'Work_Experience'} />

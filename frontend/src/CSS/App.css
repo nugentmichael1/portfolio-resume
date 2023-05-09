@@ -12,7 +12,7 @@ html {
 }
 
 /*Ensures content of each page reaches bottom.  Works with "flex-direction" in #root.*/
-div.abstract,
+div.Projects,
 div.education,
 div.Skills,
 div.WorkExperience {
