@@ -1,5 +1,5 @@
 nav {
-    background-image: linear-gradient(white, var(--DarkBlue), white);
+    /* background-image: linear-gradient(135deg, white, var(--DarkBlue)); */
     /* color: black; */
     margin: 0;
     padding: 0;
@@ -7,29 +7,6 @@ nav {
     font-size: large;
     top: 0;
     position: sticky;
-}
-
-nav .NavLink-Active li {
-    background-color: white;
-    color: black;
-    background-image: none;
-    /* border: 1px white solid; */
-}
-
-/* Nav .NavLink-Active li:hover {
-    border: 1px white solid;
-} */
-
-.NavLink li:hover {
-    color: black;
-    background-color: white;
-    background-image: none;
-    /* border-right: 1px solid black; */
-}
-
-nav a {
-    text-decoration: none;
-    display: inline-block;
 }
 
 nav ul {
@@ -41,17 +18,31 @@ nav ul {
     display: inline;
 }
 
+nav .NavLink-Active li {
+    background-color: white;
+    color: black;
+    background-image: none;
+    border: 1px var(--DarkBlue) solid;
+}
+
+.NavLink li:hover {
+    color: black;
+    background-color: white;
+    background-image: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
 nav li {
     color: white;
     background-image: linear-gradient(white, var(--DarkBlue), white);
-    /* background-color: var(--DarkBlue); */
     padding: 2vh 3vw;
-    /* border-radius: 20px 20px 0 0; */
     /* border: 1px white solid; */
-    border-right: 1px white solid;
-    border-left: 1px white solid;
 
     /* border-bottom: 1px white solid; */
+    border-radius: 50px;
 
     /* background: -webkit-linear-gradient(white, var(--DarkBlue));
     -webkit-background-clip: text;

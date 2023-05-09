@@ -1,10 +1,13 @@
 import React from 'react'
 
+//components
+// import NavBar from './NavBar'
+
 //css
 import "../CSS/Header.css"
 
 //image
-import Headshot from "../Assets/Headshot.jpg"
+// import Headshot from "../Assets/Headshot.jpg"
 
 function Header() {
     return (
@@ -17,7 +20,8 @@ function Header() {
                     Associate Software Engineer
                 </h2>
             </div>
-            <img src={Headshot} alt='Headshot of Michael Nugent' />
+            {/* <img src={Headshot} alt='Headshot of Michael Nugent' /> */}
+            {/* <NavBar /> */}
         </div>
     )
 }
