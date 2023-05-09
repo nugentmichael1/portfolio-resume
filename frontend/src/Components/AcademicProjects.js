@@ -80,7 +80,7 @@ function Projects() {
 
   return (
     <div className='Projects'>
-      <h3 id='projectsCaption'>Projects</h3>
+      {/* <h3 id='projectsCaption'>Projects</h3> */}
       {content}
       {/* <table>
         <caption>

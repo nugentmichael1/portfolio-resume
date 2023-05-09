@@ -1,16 +1,15 @@
-Nav {
-    background-image: linear-gradient(var(--DarkBlue), white);
+nav {
+    background-image: linear-gradient(white, var(--DarkBlue), white);
     /* color: black; */
     margin: 0;
     padding: 0;
-    text-align: left;
+    text-align: center;
     font-size: large;
     top: 0;
-    /* position: fixed; */
     position: sticky;
 }
 
-Nav .NavLink-Active li {
+nav .NavLink-Active li {
     background-color: white;
     color: black;
     background-image: none;
@@ -28,29 +27,34 @@ Nav .NavLink-Active li {
     /* border-right: 1px solid black; */
 }
 
-Nav a {
+nav a {
     text-decoration: none;
+    display: inline-block;
 }
 
-Nav ul {
+nav ul {
     /* background-color: black; */
     /*overflow allows background to appear in conjuction with child floats*/
-    overflow: auto;
+    /* overflow: auto; */
     /* border: 1px solid black; */
+    text-align: center;
+    display: inline;
 }
 
-Nav li {
+nav li {
     color: white;
-    background-image: linear-gradient(var(--DarkBlue), white);
+    background-image: linear-gradient(white, var(--DarkBlue), white);
     /* background-color: var(--DarkBlue); */
-    padding: 2vh 1vw;
-    float: left;
+    padding: 2vh 3vw;
     /* border-radius: 20px 20px 0 0; */
     /* border: 1px white solid; */
     border-right: 1px white solid;
+    border-left: 1px white solid;
+
     /* border-bottom: 1px white solid; */
 
     /* background: -webkit-linear-gradient(white, var(--DarkBlue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
+    display: inline-block;
 }

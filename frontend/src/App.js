@@ -6,12 +6,13 @@ import { Routes, Route } from 'react-router-dom';
 //components
 import NavBar from './Components/NavBar';
 import Footer from './Components/Footer'
+import Header from './Components/Header'
 
 //pages
 import Skills from './Pages/Skills'
-import Abstract from './Pages/Abstract'
 import WorkExperience from './Pages/WorkExperience';
 import Education from './Pages/Education'
+import AcademicProjects from './Components/AcademicProjects'
 
 //css
 import './CSS/App.css'
@@ -34,12 +35,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<NavBar />} />
-        <Route path="/:page" element={<NavBar />} />
+        <Route path="/" element={[<Header key={"title"} />, <NavBar key={"nav"} />]} />
+        <Route path="/:page" element={[<Header key={"title"} />, <NavBar key={"nav"} />]} />
       </Routes>
       <Routes>
-        <Route path="/" element={<Abstract myTest={allData} />} />
-        <Route path="/Abstract" element={<Abstract />} />
+        <Route path="/" element={<AcademicProjects />} />
+        <Route path='/Projects' element={<AcademicProjects />} />
         <Route path="/Skills" element={<Skills />} />
         <Route path="/Work_Experience" element={<WorkExperience />} />
         <Route path="/Education" element={<Education />} />
