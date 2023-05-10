@@ -35,8 +35,10 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={[<Header key={"title"} />, <NavBar key={"nav"} />]} />
-        <Route path="/:page" element={[<Header key={"title"} />, <NavBar key={"nav"} />]} />
+        {/* <Route path="/" element={[<Header key={"title"} />, <NavBar key={"nav"} />]} />
+        <Route path="/:page" element={[<Header key={"title"} />, <NavBar key={"nav"} />]} /> */}
+        <Route path="/" element={<Header key={"title"} />} />
+        <Route path="/:page" element={<Header key={"title"} />} />
       </Routes>
       <Routes>
         <Route path="/" element={<AcademicProjects />} />

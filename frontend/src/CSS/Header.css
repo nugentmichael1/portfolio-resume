@@ -1,7 +1,10 @@
 .header {
-    /* display: grid; */
-    /* grid-template-columns: 1fr fit-content; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-image: linear-gradient(45deg, white, var(--DarkBlue));
+    position: sticky;
+    top: 0;
+    align-items: center;
 }
 
 #headerHeadings h1,
@@ -13,11 +16,7 @@
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent; */
-    text-align: left;
-    margin-left: 5vw;
-}
-
-.header img {
-    height: 10vh;
-    display: none;
+    /* text-align: left;
+    margin-left: 5vw; */
+    text-align: center;
 }
