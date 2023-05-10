@@ -9,18 +9,13 @@ import youTubeLogo from "../Assets/yt_logo_rgb_dark.png"
 import webApp from "../Assets/webAppDark.png"
 // import GitHubLogo from "../Assets/GitHub_Logo.png"
 
-
-function CarouselCaption({ title, presentation, app, repository }) {
-    // console.log(presentation, app, repository)
-
-    // console.log(presentation)
+//Returns array of li elements with links inside based on input
+const buildCarouselCaptionLinks = (presentation, app, repository) => {
 
     const videoPresentationLi = (presentation === "") ? null :
         <li>
             <a href={presentation} target="_blank" rel='noreferrer'>
-                {/* <img src={youTubeIcon} className='ytIcon' /> */}
                 <img src={youTubeLogo} alt="YouTube Logo as link to project's video presentation." className='ytIcon' />
-                {/* Presentation */}
             </a>
         </li>
 
@@ -28,29 +23,55 @@ function CarouselCaption({ title, presentation, app, repository }) {
         <li>
             <a href={app} target="_blank" rel='noreferrer'>
                 <img src={webApp} alt="Web App logo as link to project's live use." className='webAppIcon' />
-                {/* Web App */}
-                {/* <svg>
-                    <text fill='#ffffff' fontSize={45} fontFamily='Verdana' x={50} y={86}>{webAppSvgText}</text>
-                </svg> */}
             </a>
         </li >
 
     const repositoryLi = (repository === undefined) ? null :
         <li>
             <a href={repository} target="_blank" rel='noreferrer'>
-                {/* <img src={GitHubMarkWhite} className='gitHubMark' /> */}
                 <img src={GitHubLogoWhite} alt="GitHub Logo (White) as link to project's repository." className='gitHubLogo' />
-                {/* Repository */}
             </a>
         </li>
+
+
+    return [videoPresentationLi, webAppLi, repositoryLi]
+
+}
+
+//Helps break down nested lists
+const nestedLists = (composite) => {
+
+    if (Array.isArray(composite)) {
+        const conceptsList = []
+
+        let conceptsKey = 0
+
+        composite.forEach(concept => {
+
+            conceptsList.push(<li key={conceptsKey++}>{nestedLists(concept)}</li>)
+        })
+
+        return <ul>{conceptsList}</ul>
+    }
+
+    else if (typeof (composite) === "object") {
+        const label = Object.keys(composite)[0]
+
+        return [label, ":", nestedLists(composite[label])]
+    }
+
+    return composite
+}
+
+
+function CarouselCaption({ title, concepts, presentation, app, repository }) {
 
     return (
         <div className='myCarouselCaption'>
             <h3>{title}</h3>
+            <h4>{nestedLists(concepts)}</h4>
             <ul>
-                {videoPresentationLi}
-                {webAppLi}
-                {repositoryLi}
+                {buildCarouselCaptionLinks(presentation, app, repository)}
             </ul>
         </div>
     )

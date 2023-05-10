@@ -39,13 +39,13 @@ function buildCarousel(data) {
           <source src={videos[project.clipName]} type="video/mp4" />
         </video>
         <Carousel.Caption>
-          <CarouselCaption title={project.Title} repository={project.GitHub} presentation={project.Demo} app={project.app} />
+          <CarouselCaption title={project.Subject} concepts={project.Emphasized_Concepts} repository={project.GitHub} presentation={project.Demo} app={project.app} />
         </Carousel.Caption>
       </Carousel.Item >
     )
   })
 
-  return <Carousel fade>
+  return <Carousel fade indicators={false}>
     {carouselItems}
   </Carousel>
 
@@ -80,44 +80,7 @@ function Projects() {
 
   return (
     <div className='Projects'>
-      {/* <h3 id='projectsCaption'>Projects</h3> */}
       {content}
-      {/* <table>
-        <caption>
-          <h3>Projects</h3>
-        </caption>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Course</th>
-            <th>Emphasized Concepts</th>
-            <th>Notes</th>
-            <th>Demo</th>
-            <th>GitHub</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tbody}
-        </tbody>
-      </table> */}
-      {/* <Carousel fade>
-        <Carousel.Item>
-          <video controls={false} autoPlay loop muted>
-            <source src={puzzleSliderClip} type="video/mp4" />
-          </video>
-          <Carousel.Caption>
-            <CarouselCaption title="State Space Search" />
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <video controls={false} autoPlay loop muted>
-            <source src={gomoku} type="video/mp4" />
-          </video>
-          <Carousel.Caption>
-            <CarouselCaption title="Gomoku" />
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel> */}
     </div >
   )
 }

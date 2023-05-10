@@ -4,7 +4,7 @@
 // import gitHubMark from "../Assets/github-mark.png"
 import gitHubMarkWhite from "../Assets/github-mark-white.png"
 
-//Helps break down nested lists
+//Returns UL with LIs from nested lists
 const nestedLists = (composite) => {
 
     if (Array.isArray(composite)) {
