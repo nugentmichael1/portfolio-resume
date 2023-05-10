@@ -7,16 +7,15 @@
     align-items: center;
 }
 
-#headerHeadings h1,
-#headerHeadings h2 {
-    /* background: -webkit-linear-gradient(45deg, var(--DarkBlue)); */
-    /* background-color: #050A30;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent; */
-    /* text-align: left;
-    margin-left: 5vw; */
+#headerHeadings {
     text-align: center;
+    /* color: var(--DarkBlue); */
+}
+
+#headerHeadings h1 {
+    font-size: xxx-large;
+}
+
+#headerHeadings h2 {
+    font-size: x-large;
 }

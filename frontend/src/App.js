@@ -4,7 +4,6 @@
 import { Routes, Route } from 'react-router-dom';
 
 //components
-import NavBar from './Components/NavBar';
 import Footer from './Components/Footer'
 import Header from './Components/Header'
 
