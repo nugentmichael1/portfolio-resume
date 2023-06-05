@@ -20,7 +20,7 @@ class ProjectsDAO {
             const results = snapshot.docs.map(doc => doc.data())
 
             //debug
-            console.log(results)
+            // console.log(results)
 
             return results;
         }
