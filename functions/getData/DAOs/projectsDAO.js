@@ -14,13 +14,13 @@ class ProjectsDAO {
             // console.log("Try block of ProjectsDAO getAll().")
 
             // Access collection (table) and take snapshot
-            const snapshot = await admin.firestore().collection("Projects").get();
+            const snapshot = await admin.firestore().collection("Projects").orderBy("Rank", "desc").get();
 
             // Break each document of snapshot list into component pieces.
             const results = snapshot.docs.map(doc => doc.data())
 
             //debug
-            // console.log(results)
+            console.log(results)
 
             return results;
         }
