@@ -13,7 +13,7 @@ import '../CSS/AcademicProjects.css'
 // import projectsTable from '../Utility/projectsTable'
 
 //Components
-import CarouselCaption from './CarouselCaption'
+import CarouselCaption from '../Components/CarouselCaption'
 
 //videos
 import puzzleSliderClip from "../Assets/Videos/15PuzzleClip.mp4"

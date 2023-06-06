@@ -11,7 +11,7 @@ import Header from './Components/Header'
 import Skills from './Pages/Skills'
 import WorkExperience from './Pages/WorkExperience';
 import Education from './Pages/Education'
-import AcademicProjects from './Components/AcademicProjects'
+import AcademicProjects from './Pages/AcademicProjects'
 
 //css
 import './CSS/App.css'
