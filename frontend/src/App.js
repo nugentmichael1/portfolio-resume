@@ -18,18 +18,51 @@ import './CSS/App.css'
 
 //functions
 import retrieveAllData from './Utility/retrieveAllData';
-
-
-
-//Complete download of all data from backend instead of individually as needed.  
-//This will reduce api calls (which cost money if over google's set limit) from regular users, and challenge nefarious actors who want to abuse the api; they would have to reopen tabs.
-const allData = sessionStorage.getItem("allData")
-
-//Check to see if data is already present.  Retrieve if not.
-if (allData === null) retrieveAllData()
+import { useEffect, useState } from 'react';
 
 
 function App() {
+
+  const [projectsData, setProjectsData] = useState(null)
+
+  const [languagesData, setLanguagesData] = useState(null)
+
+  const [experienceData, setExperienceData] = useState(null)
+
+  useEffect(() => {
+
+    const retrieveData = async () => {
+
+      const data = await retrieveAllData();
+
+      console.log(data)
+
+      distributeData(data);
+
+    }
+
+    const distributeData = (data) => {
+
+      setProjectsData(data.projects)
+      setLanguagesData(data.languages)
+      setExperienceData(data.experience)
+      console.log(data)
+    }
+
+    //Complete download of all data from backend instead of individually as needed.  
+    //This will reduce api calls (which cost money if over google's set limit) from regular users, and challenge nefarious actors who want to abuse the api; they would have to reopen tabs.
+    const dataStr = sessionStorage.getItem("allData")
+
+    //Check to see if data is already present.  Retrieve if not.
+    if (dataStr === null) {
+      // console.log(retrieveAllData())
+      retrieveData();
+    }
+    else {
+      const data = JSON.parse(dataStr);
+      distributeData(data);
+    }
+  }, [])
 
   return (
     <>
@@ -40,11 +73,11 @@ function App() {
         <Route path="/:page" element={<Header key={"title"} />} />
       </Routes>
       <Routes>
-        <Route path="/" element={<AcademicProjects />} />
-        <Route path='/Projects' element={<AcademicProjects />} />
-        <Route path="/Skills" element={<Skills />} />
-        <Route path="/Work_Experience" element={<WorkExperience />} />
+        <Route path="/" element={<AcademicProjects data={projectsData} />} />
+        <Route path='/Projects' element={<AcademicProjects data={projectsData} />} />
         <Route path="/Education" element={<Education />} />
+        <Route path="/Skills" element={<Skills languagesData={languagesData} />} />
+        <Route path="/Work_Experience" element={<WorkExperience data={experienceData} />} />
       </Routes>
       <Footer />
     </>

@@ -13,21 +13,21 @@ import webApp from "../Assets/webAppDark.png"
 const buildCarouselCaptionLinks = (presentation, app, repository) => {
 
     const videoPresentationLi = (presentation === "") ? null :
-        <li>
+        <li key={"presentation"}>
             <a href={presentation} target="_blank" rel='noreferrer'>
                 <img src={youTubeLogo} alt="YouTube Logo as link to project's video presentation." className='ytIcon' />
             </a>
         </li>
 
     const webAppLi = (app === undefined) ? null :
-        <li>
+        <li key={"webApp"}>
             <a href={app} target="_blank" rel='noreferrer'>
                 <img src={webApp} alt="Web App logo as link to project's live use." className='webAppIcon' />
             </a>
         </li >
 
     const repositoryLi = (repository === undefined) ? null :
-        <li>
+        <li key={"repository"}>
             <a href={repository} target="_blank" rel='noreferrer'>
                 <img src={GitHubLogoWhite} alt="GitHub Logo (White) as link to project's repository." className='gitHubLogo' />
             </a>

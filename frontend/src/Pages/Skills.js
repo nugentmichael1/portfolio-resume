@@ -9,11 +9,11 @@ import SoftwareEngineering from '../Components/Skills/SoftwareEngineering'
 // CSS
 import '../CSS/Skills.css'
 
-function Skills() {
+function Skills({ languagesData }) {
     return (
         <div className='Skills'>
             {/* <h1>Skills</h1> */}
-            <Languages />
+            <Languages data={languagesData} />
             <WebDevelopment />
             <SoftwareEngineering />
             <Soft />

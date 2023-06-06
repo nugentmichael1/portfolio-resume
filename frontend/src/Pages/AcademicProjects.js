@@ -31,7 +31,7 @@ function buildCarousel(data) {
   const carouselItems = [];
 
 
-  data.forEach((project, i) => {
+  data.forEach((project) => {
 
     carouselItems.push(
       < Carousel.Item key={project.Title}>
@@ -53,30 +53,41 @@ function buildCarousel(data) {
 
 
 
-function Projects() {
+function Projects({ data }) {
 
-  const [content, setContent] = useState(<p>Fetching academic projects data from backend.</p>)
+  const [content, setContent] = useState(<p>Fetching academic projects data from backend.  This should only take 1-3 seconds.</p>)
+
 
   useEffect(() => {
-
-    const getProjects = () => {
-
-      const projects = JSON.parse(sessionStorage.getItem("projects"))
-
-      // console.log(projects)
-
-      setContent(buildCarousel(projects))
-
-      window.removeEventListener("allData", getProjects)
+    if (data !== null) {
+      setContent(buildCarousel(data))
     }
-
-    if (sessionStorage.getItem("projects") != null) getProjects()
-    else {
-      window.addEventListener("allData", getProjects)
-    }
+  }, [data])
 
 
-  }, [])
+  // const carousel = buildCarousel(data)
+
+
+  // useEffect(() => {
+
+  //   const getProjects = () => {
+
+  //     const projects = JSON.parse(sessionStorage.getItem("projects"))
+
+  //     // console.log(projects)
+
+  //     setContent(buildCarousel(projects))
+
+  //     window.removeEventListener("allData", getProjects)
+  //   }
+
+  //   if (sessionStorage.getItem("projects") != null) getProjects()
+  //   else {
+  //     window.addEventListener("allData", getProjects)
+  //   }
+
+
+  // }, [])
 
   return (
     <div className='Projects'>

@@ -1,39 +1,46 @@
-// Languages Component - Creates a table of my competencies for known programming languages.  Uses data in session storage, which should be downloaded via backend.
+// Languages Component - Creates a table of my competencies for known programming languages.
 
 import React, { useEffect, useState } from 'react'
 
-function Languages() {
+function Languages({ data }) {
 
     // states for table row and header
-    const [row, setRow] = useState(<td>Fetching languages data from backend.</td>)
+    const [row, setRow] = useState(<td>Fetching languages data from backend.  This should only take 1-3 seconds.</td>)
     const [thead, setTHead] = useState()
 
     useEffect(() => {
-
-        const getLanguages = () => {
-
-            //get languages data from session storage
-            const languages = JSON.parse(sessionStorage.getItem("languages"))
-
-            //build table with languages data
-            buildTable(languages)
-
-            //remove session storage change event listener, if it even exists
-            window.removeEventListener('allData', getLanguages)
+        if (data !== null) {
+            // build table with languages data
+            buildTable(data)
         }
+    }, [data])
 
-        //check session storage for existence of langauges data
+    // useEffect(() => {
 
-        if (sessionStorage.getItem("languages") != null)
-            //retrieve and build table
-            getLanguages()
+    //     const getLanguages = () => {
 
-        else {
-            //set up event listener to wait for arrival of data
-            window.addEventListener('allData', getLanguages)
-        }
+    //         //get languages data from session storage
+    //         const languages = JSON.parse(sessionStorage.getItem("languages"))
 
-    }, [])
+    //         //build table with languages data
+    //         buildTable(languages)
+
+    //         //remove session storage change event listener, if it even exists
+    //         window.removeEventListener('allData', getLanguages)
+    //     }
+
+    //     //check session storage for existence of langauges data
+
+    //     if (sessionStorage.getItem("languages") != null)
+    //         //retrieve and build table
+    //         getLanguages()
+
+    //     else {
+    //         //set up event listener to wait for arrival of data
+    //         window.addEventListener('allData', getLanguages)
+    //     }
+
+    // }, [])
 
 
     //builds table of languages with passed data

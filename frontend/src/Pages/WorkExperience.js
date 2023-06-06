@@ -1,7 +1,7 @@
 // Work Experience page
 
 //react
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 //css
 import "../CSS/WorkExperience.css"
@@ -10,12 +10,24 @@ import "../CSS/WorkExperience.css"
 import WorkExperienceGeneral from '../Components/WorkExperienceGeneral'
 import WorkExperienceIndustry from '../Components/WorkExperienceIndustry'
 
-function WorkExperience() {
+function WorkExperience({ data }) {
+
+
+  const [industryData, setIndustryData] = useState(null)
+
+  const [generalData, setGeneralData] = useState(null)
+
+  useEffect(() => {
+    if (data !== null) {
+      setIndustryData(data.industry)
+      setGeneralData(data.general)
+    }
+  }, [data])
 
   return (
     <div className='WorkExperience'>
-      <WorkExperienceIndustry />
-      <WorkExperienceGeneral />
+      <WorkExperienceIndustry data={industryData} />
+      <WorkExperienceGeneral data={generalData} />
     </div>
   )
 }
