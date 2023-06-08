@@ -3,8 +3,9 @@ import React from 'react'
 import buildSkillsTBody from '../../Utility/buildSkillsTBody'
 
 const SEData = {
+    "Architecture": ["MVC", "Publisher / Subscriber", "Composite"],
     "Design": ["Cohesion / Coupling", "SOLID Principles"],
-    "Testing": ["Coverage"],
+    "Testing": ["Coverage", "Black Box", "White Box"],
     "UML Diagrams": ["Use Case", "Sequence", "Class"]
 }
 //                 Software Requirements Specifications (SRS)

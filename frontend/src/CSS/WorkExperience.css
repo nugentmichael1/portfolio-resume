@@ -16,7 +16,28 @@
 }
 
 .WorkExperience table {
-    margin: 0 2vw;
+    margin: 0 auto;
+    width: 90vw;
+}
+
+.WorkExperience .start {
+    width: 10%;
+}
+
+.WorkExperience .end {
+    width: 10%;
+}
+
+.WorkExperience .title {
+    width: 30%;
+}
+
+.WorkExperience .company {
+    width: 30%;
+}
+
+.WorkExperience .location {
+    width: 20%;
 }
 
 /* table.WorkExperience tr {

@@ -2,16 +2,49 @@
 
 import React, { useEffect, useState } from 'react'
 
+const buildExperienceTableBody = (data) => {
+
+    //copy data in preparation of sort
+    const dataCopy = [...data]
+
+    //sort array by experience in descending order
+    dataCopy.sort((a, b) => b.YearsExperience - a.YearsExperience)
+
+    //table rows array
+    const trs = []
+
+    //dynamically build table cells and push into table rows
+    dataCopy.forEach((language, i) => {
+
+        //debug
+        // console.log(language)
+
+
+        const tds = []
+        tds.push(<td key="name">{language.Name}</td>)
+        tds.push(<td key="experience">{language.YearsExperience}</td>)
+
+        const oddXorEvenClass = (i % 2 === 0) ? "even" : "odd"
+        trs.push(<tr key={language.Name} className={oddXorEvenClass}>{tds}</tr>)
+    })
+
+    return trs
+
+}
+
 function Languages({ data }) {
 
     // states for table row and header
-    const [row, setRow] = useState(<td>Fetching languages data from backend.  This should only take 1-3 seconds.</td>)
-    const [thead, setTHead] = useState()
+    // const [row, setRow] = useState(<td>Fetching languages data from backend.  This should only take 1-3 seconds.</td>)
+    // const [thead, setTHead] = useState()
+    const [tbody, setTbody] = useState(<tr><td colSpan={2}>Fetching languages data from backend.  This should only take 1-3 seconds.</td></tr>)
 
     useEffect(() => {
         if (data !== null) {
             // build table with languages data
-            buildTable(data)
+            // buildTable(data)
+            const builtTBody = buildExperienceTableBody(data)
+            setTbody(builtTBody)
         }
     }, [data])
 
@@ -43,71 +76,93 @@ function Languages({ data }) {
     // }, [])
 
 
-    //builds table of languages with passed data
-    const buildTable = (languages) => {
+    // //builds table of languages with passed data
+    // const buildTable = (languages) => {
 
 
-        const categories = { Novice: [], "Advanced Beginner": [], Competent: [], Proficient: [], Expert: [] }
+    //     const categories = { Novice: [], "Advanced Beginner": [], Competent: [], Proficient: [], Expert: [] }
 
-        //distribute each language name to its associated cofidence level
-        languages.forEach(({ Name, Confidence }) => {
-            categories[Confidence].push(Name)
-        })
+    //     //distribute each language name to its associated cofidence level
+    //     languages.forEach(({ Name, Confidence }) => {
+    //         categories[Confidence].push(Name)
+    //     })
 
-        //arrays for header and row
-        const thead = []
-        const row = []
+    //     //arrays for header and row
+    //     const thead = []
+    //     const row = []
 
-        //keys for child components
-        let key2 = 0
+    //     //keys for child components
+    //     let key2 = 0
 
-        //odd or even class
-        let oddXorEven = 'odd'
+    //     //odd or even class
+    //     let oddXorEven = 'odd'
 
 
-        for (const category in categories) {
-            thead.push(<th key={key2++} className={oddXorEven}>{category}</th>)
+    //     for (const category in categories) {
+    //         thead.push(<th key={key2++} className={oddXorEven}>{category}</th>)
 
-            const titles = []
-            let key1 = 0
+    //         const titles = []
+    //         let key1 = 0
 
-            let oddXorEven2 = 'odd'
+    //         let oddXorEven2 = 'odd'
 
-            categories[category].forEach(title => {
-                titles.push(<li key={key1++} className={oddXorEven2}>{title}</li>)
+    //         categories[category].forEach(title => {
+    //             titles.push(<li key={key1++} className={oddXorEven2}>{title}</li>)
 
-                oddXorEven2 = (oddXorEven2 === 'odd') ? 'even' : 'odd';
-            })
+    //             oddXorEven2 = (oddXorEven2 === 'odd') ? 'even' : 'odd';
+    //         })
 
-            row.push(<td key={key2} className={oddXorEven}><ul key={key2++}>{titles}</ul></td>)
+    //         row.push(<td key={key2} className={oddXorEven}><ul key={key2++}>{titles}</ul></td>)
 
-            oddXorEven = (oddXorEven === 'odd') ? 'even' : 'odd';
-        }
+    //         oddXorEven = (oddXorEven === 'odd') ? 'even' : 'odd';
+    //     }
 
-        //use state functions to dynamically change table header and row
-        setTHead(thead)
-        setRow(row)
-    }
+    //     //use state functions to dynamically change table header and row
+    //     setTHead(thead)
+    //     setRow(row)
+    // }
 
 
     return (
         // {table}
 
-        <table id='Languages'>
-            <caption>
-                <h3>Languages</h3>
-            </caption>
-            <thead>
-                <tr>
-                    {thead}
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    {row}
-                </tr>
-            </tbody>
-        </table>
+        <>
+            {/* <table id='Languages'>
+                <caption>
+                    <h3>Languages</h3>
+                </caption>
+                <thead>
+                    <tr>
+                        {thead}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {row}
+                    </tr>
+                </tbody>
+            </table> */}
+
+            <table id='LanguagesExperience'>
+                <caption>
+                    <h3>Languages</h3>
+                </caption>
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Years
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {tbody}
+                </tbody>
+            </table >
+        </>
     )
 }
 

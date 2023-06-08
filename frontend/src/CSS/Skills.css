@@ -4,10 +4,11 @@
     border: 1px solid black;
     /* background-color: blue; */
     /* float: left; */
-    border-spacing: 1vw;
+    border-spacing: 0;
     border-collapse: separate;
     display: inline-table;
     margin: 0 2vw;
+    /* position: relative; */
 }
 
 .Skills li.odd {
@@ -16,4 +17,33 @@
 
 .Skills li.even {
     background-color: var(--Even);
+}
+
+.Skills li {
+    padding: 0 1vw;
+}
+
+/*To move ul to top of table cells*/
+.Skills tr {
+    vertical-align: top;
+}
+
+.Skills tr.odd {
+    background-color: var(--Odd);
+}
+
+.Skills tr.even {
+    background-color: var(--Even);
+}
+
+.Skills table#LanguagesExperience {
+    border-collapse: collapse;
+}
+
+.Skills table#LanguagesExperience td {
+    padding: 0 1vw;
+}
+
+.Skills th {
+    text-align: center;
 }

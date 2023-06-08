@@ -21,22 +21,22 @@ const experienceTable = (records) => {
         //properly format
         const monthYearStr_start = createMonthYearStr(records[record].Start._seconds)
         //push onto table row
-        tr.push(<td key="start">{monthYearStr_start}</td>)
+        tr.push(<td key="start" className="start">{monthYearStr_start}</td>)
 
         //end date
         //propery format
         const monthYearStr_end = createMonthYearStr(records[record].End._seconds)
         //push onto table row
-        tr.push(<td key="end">{monthYearStr_end}</td>)
+        tr.push(<td key="end" className="end">{monthYearStr_end}</td>)
 
         //title
-        tr.push(<td key="title">{records[record].Title}</td>)
+        tr.push(<td key="title" className="title">{records[record].Title}</td>)
 
         //Company
-        tr.push(<td key="company">{records[record].Company}</td>)
+        tr.push(<td key="company" className="company">{records[record].Company}</td>)
 
         //Location
-        tr.push(<td key="location">{records[record].Location}</td>)
+        tr.push(<td key="location" className="location">{records[record].Location}</td>)
 
 
 

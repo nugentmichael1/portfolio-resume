@@ -10,7 +10,6 @@ function WorkExperienceIndustry({ data }) {
 
   const [tbody, setTbody] = useState(<tbody><tr><td colSpan={5}>Fetching work experience data from backend.</td></tr></tbody>)
 
-
   useEffect(() => {
 
     if (data !== null) {
@@ -19,8 +18,30 @@ function WorkExperienceIndustry({ data }) {
       setTbody(experienceTable(data));
     }
 
-
   }, [data])
+
+  return (
+    <>
+      <table className='WorkExperienceIndustry'>
+        <caption><h3>Industry Relevant</h3></caption>
+        <thead>
+          <tr>
+            <th>Start</th>
+            <th>End</th>
+            <th>Title</th>
+            <th>Company</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        {tbody}
+      </table>
+    </>
+  )
+}
+
+export default WorkExperienceIndustry
+
+
 
 
   // useEffect(() => {
@@ -48,25 +69,3 @@ function WorkExperienceIndustry({ data }) {
   //   }
 
   // }, [])
-
-
-  return (
-    <>
-      <table className='WorkExperienceIndustry'>
-        <caption><h3>Industry Relevant</h3></caption>
-        <thead>
-          <tr>
-            <th>Start</th>
-            <th>End</th>
-            <th>Title</th>
-            <th>Company</th>
-            <th>Location</th>
-          </tr>
-        </thead>
-        {tbody}
-      </table>
-    </>
-  )
-}
-
-export default WorkExperienceIndustry

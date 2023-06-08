@@ -4,8 +4,8 @@ import React from 'react'
 import buildSkillsTBody from '../../Utility/buildSkillsTBody'
 
 const WDData = {
-  "Frontend": ["React", "HTML", "CSS"],
-  "Backend": ["REST API", "CRUD"],
+  "Frontend": ["React", "HTML", "CSS", "JavaScript"],
+  "Backend": ["REST API", "CRUD", "Node", "SQL", "NoSQL"],
   "Full Stack": ["LAMP", "MERN", "AJAX"]
 }
 

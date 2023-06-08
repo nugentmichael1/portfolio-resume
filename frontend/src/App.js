@@ -34,19 +34,15 @@ function App() {
     const retrieveData = async () => {
 
       const data = await retrieveAllData();
-
-      console.log(data)
-
+      
       distributeData(data);
-
     }
 
     const distributeData = (data) => {
-
+      //useState setters
       setProjectsData(data.projects)
       setLanguagesData(data.languages)
       setExperienceData(data.experience)
-      console.log(data)
     }
 
     //Complete download of all data from backend instead of individually as needed.  
