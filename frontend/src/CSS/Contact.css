@@ -18,6 +18,10 @@ img#gitHubMark {
     /* width: var(--contactIconWidth); */
 }
 
+img#linkedInLogo {
+    height: var(--contactIconHeight);
+}
+
 img#resumeIcon {
     height: var(--contactIconHeight);
     /* width: var(--contactIconWidth); */
