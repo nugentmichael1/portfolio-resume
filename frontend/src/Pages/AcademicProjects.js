@@ -55,7 +55,7 @@ function buildCarousel(data) {
 
 function Projects({ data }) {
 
-  const [content, setContent] = useState(<p>Fetching academic projects data from backend.  This should only take 1-3 seconds.</p>)
+  const [content, setContent] = useState(<p>Fetching academic projects data from backend.  This should only take 3 seconds at most and is the cost of a free tier serverless architecture.</p>)
 
 
   useEffect(() => {

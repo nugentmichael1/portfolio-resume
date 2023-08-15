@@ -3,13 +3,14 @@ import React from 'react'
 
 //images
 import emailIcon from "../Assets/emailIcon.png"
-import phoneIcon from "../Assets/phoneIcon.png"
+// import phoneIcon from "../Assets/phoneIcon.png"
 // import gitHubMark from "../Assets/github-mark.png"
 import gitHubMarkWhite from "../Assets/github-mark-white.png"
-import linkedInLogo from "../Assets/LI-Logo.png"
+// import linkedInLogo from "../Assets/LI-Logo.png"
 import linkedInBug from "../Assets/LI-In-Bug.png"
 import resumeIcon from "../Assets/resumeIcon.png"
-import resume from "../Assets/MichaelNugentResume.pdf"
+// import resume from "../Assets/MichaelNugentResume.pdf"
+import resume from "../Assets/SoftwareEngineer.pdf"
 
 //css
 import '../CSS/Contact.css'
