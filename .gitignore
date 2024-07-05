@@ -260,3 +260,6 @@ google-services.json
 
 # Directory of collected material like CSS portfolio tabs
 LearningResources/
+
+#Videos
+*.mp4

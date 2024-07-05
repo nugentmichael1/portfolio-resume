@@ -43,11 +43,6 @@
     display: flex;
 }
 
-.card-description ul{
-    /* list-style-type: disc; */
-    /* margin-left: 1vw; */
-}
-
 .card-links {
     justify-content: center;
     display: flex;
