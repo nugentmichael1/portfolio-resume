@@ -2,8 +2,8 @@ import React from 'react'
 
 import "../CSS/Degree.css"
 import eDiploma from '../Assets/eDiploma.pdf'
-import bulldog from "../Assets/FresnoStateBulldog.png"
-import pdfIcon from "../Assets/pdfIcon.png"
+import bulldog from "../Assets/LogoIcons/FresnoStateBulldog.png"
+import pdfIcon from "../Assets/LogoIcons/pdfIcon.png"
 // import { GrDocumentPdf } from "react-icons/gr"
 
 function Degree() {

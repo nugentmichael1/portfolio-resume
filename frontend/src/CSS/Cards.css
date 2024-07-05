@@ -1,0 +1,74 @@
+/*Cards CSS*/
+
+.Cards-Container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 1vh 1vw;
+    /* border: 1px solid #ccc; */
+}
+
+.card-title {
+    font-size: 2.5rem;
+    margin-bottom: 1vh;
+    text-align: center;
+    /* border: 1px solid #ccc; */
+}
+
+.card-description {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1vh;
+    justify-content: center;
+    /* border: 1px solid #ccc; */
+    display: flex;
+}
+
+.card-description ul{
+    /* list-style-type: disc; */
+    /* margin-left: 1vw; */
+}
+
+.card-links {
+    justify-content: center;
+    display: flex;
+    /* border: 1px solid #ccc; */
+}
+
+.card-links img {
+    width: auto;
+}
+
+.card-links .ytIcon {
+    height: 3.5vh;
+    margin: 0 1vw;
+}
+
+.card-links .webAppIcon {
+    height: 3.5vh;
+    margin: 0 1vw;
+}
+
+.card-links .gitHubMark {
+    height: 3.5vh;
+    margin: 0 1vw;
+}

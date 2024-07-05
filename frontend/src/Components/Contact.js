@@ -2,15 +2,15 @@
 import React from 'react'
 
 //images
-import emailIcon from "../Assets/emailIcon.png"
-// import phoneIcon from "../Assets/phoneIcon.png"
-// import gitHubMark from "../Assets/github-mark.png"
-import gitHubMarkWhite from "../Assets/github-mark-white.png"
-// import linkedInLogo from "../Assets/LI-Logo.png"
-import linkedInBug from "../Assets/LI-In-Bug.png"
-import resumeIcon from "../Assets/resumeIcon.png"
+import emailIcon from "../Assets/LogoIcons/emailIcon.png"
+// import phoneIcon from "../Assets/LogoIcons/phoneIcon.png"
+// import gitHubMark from "../Assets/LogoIcons/github-mark.png"
+import gitHubMarkWhite from "../Assets/LogoIcons/github-mark-white.png"
+// import linkedInLogo from "../Assets/LogoIcons/LI-Logo.png"
+import linkedInBug from "../Assets/LogoIcons/LI-In-Bug.png"
+import resumeIcon from "../Assets/LogoIcons/resumeIcon.png"
 // import resume from "../Assets/MichaelNugentResume.pdf"
-import resume from "../Assets/SoftwareEngineer.pdf"
+import resume from "../Assets/MichaelNugentSoftwareEngineer.pdf"
 
 //css
 import '../CSS/Contact.css'

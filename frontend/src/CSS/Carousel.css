@@ -1,0 +1,123 @@
+
+.Carousel-Container video {
+    width: 90vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+    filter: brightness(20%);
+}
+
+.Carousel-Container .ytIcon {
+    height: 3vh;
+}
+
+.Carousel-Container .webAppIcon {
+    height: 5vh;
+    margin: 0 1vw;
+}
+
+.Carousel-Container .gitHubLogo {
+    height: 5vh;
+}
+
+.carousel-caption {
+    top: 0%;
+    bottom: auto;
+    text-align: center;
+    height: 100%;
+}
+
+.myCarouselCaption {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template:
+        "a a a" 1fr
+        "b b b" 1fr
+        "c d e" 1fr;
+    /* align-items: center; */
+}
+
+.myCarouselCaption:after {
+    content: "";
+    font-size: 0;
+    height: 60%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.carousel-caption h3 {
+    font-size: 6vh;
+    margin: 0;
+    padding: 0;
+    grid-row: 1;
+    grid-column: 1/4;
+    align-self: start;
+}
+
+.carousel-caption h4 {
+    grid-row: 2;
+    grid-column: 1/4;
+    align-self: center;
+    /* width: fit-content; */
+}
+
+.carousel-caption h4 li {
+    /* background-color: yellow; */
+    /* border: 1px solid yellow; */
+    /* width: min-content; */
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.carousel-caption ul {
+    margin: 2vh auto;
+    vertical-align: bottom;
+    display: inline-block;
+    grid-row: 3;
+    grid-column: 1/4;
+    align-self: end;
+}
+
+.carousel-caption li {
+    display: inline;
+    margin: 2vh 2vw;
+}
+
+
+/* 
+.carousel {
+    margin: 1vh auto;
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto 10vw;
+    column-gap: 1vw;
+    row-gap: 1vh;
+    width: 80%;
+}
+
+.carousel-item1 {
+    grid-column: 1;
+    grid-row: 1/4;
+}
+
+.carousel-item2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.carousel-item3 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.carousel-item4 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+video {
+    display: block;
+} */

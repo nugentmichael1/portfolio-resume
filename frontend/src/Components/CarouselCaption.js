@@ -1,5 +1,7 @@
 import React from 'react'
 
+//utility function
+import nestedLists from "../Utility/nestedLists"
 
 //Icons
 // import GitHubMarkWhite from "../Assets/github-mark-white.png"
@@ -37,32 +39,6 @@ const buildCarouselCaptionLinks = (presentation, app, repository) => {
     return [videoPresentationLi, webAppLi, repositoryLi]
 
 }
-
-//Helps break down nested lists
-const nestedLists = (composite) => {
-
-    if (Array.isArray(composite)) {
-        const conceptsList = []
-
-        let conceptsKey = 0
-
-        composite.forEach(concept => {
-
-            conceptsList.push(<li key={conceptsKey++}>{nestedLists(concept)}</li>)
-        })
-
-        return <ul>{conceptsList}</ul>
-    }
-
-    else if (typeof (composite) === "object") {
-        const label = Object.keys(composite)[0]
-
-        return [label, ":", nestedLists(composite[label])]
-    }
-
-    return composite
-}
-
 
 function CarouselCaption({ title, concepts, presentation, app, repository }) {
 
