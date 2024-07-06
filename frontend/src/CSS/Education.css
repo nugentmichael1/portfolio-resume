@@ -1,7 +1,7 @@
-.education{
+#Education{
     background-color: var(--Section2);
 }
 
-.education H2{
+#Education H2{
     color: var(--H2);
 }

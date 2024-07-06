@@ -1,4 +1,4 @@
-.Projects {
+#Projects {
     /* margin: 4vh auto; */
     padding: 0;
     /* width: 90vw; */
@@ -9,7 +9,7 @@
     background-color: var(--Section0);
 }
 
-.Projects h2 {
+#Projects h2 {
     /* background-color: black; */
     color: var(--H2);
 }

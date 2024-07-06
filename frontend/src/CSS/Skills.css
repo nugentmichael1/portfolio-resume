@@ -1,6 +1,6 @@
 /* Skills Page CSS*/
 
-.Skills {
+#Skills {
     background-color: var(--Section3);
 }
 
@@ -9,62 +9,62 @@
     flex-wrap: wrap;
 }
 
-.Skills H2 {
+#Skills H2 {
     color: var(--H2);
 }
 
-.Skills table {
+#Skills table {
     border: 1px solid black;
     /* background-color: blue; */
     /* float: left; */
     border-spacing: 0;
     border-collapse: separate;
     /* display: inline-table; */
-    margin: 0 2vw;
+    margin: 2vh 2vw;
     /* position: relative; */
 }
 
-.Skills li.odd {
+#Skills li.odd {
     background-color: var(--Odd);
     color: var(--Even);
 }
 
-.Skills li.even {
+#Skills li.even {
     background-color: var(--Even);
     color: var(--Odd);
 }
 
-.Skills li {
+#Skills li {
     padding: 0 1vw;
 }
 
 /*To move ul to top of table cells*/
-.Skills tr {
+#Skills tr {
     vertical-align: top;
 }
 
-.Skills tr.odd {
+#Skills tr.odd {
     background-color: var(--Odd);
     color: var(--Even);
 }
 
-.Skills tr.even {
+#Skills tr.even {
     background-color: var(--Even);
     color: var(--Odd);
 }
 
-.Skills table#LanguagesExperience {
+#Skills table#LanguagesExperience {
     border-collapse: collapse;
 }
 
-.Skills table#LanguagesExperience H3 {
+#Skills table#LanguagesExperience H3 {
     color: var(--Purple0);
 }
 
-.Skills table#LanguagesExperience td {
+#Skills table#LanguagesExperience td {
     padding: 0 1vw;
 }
 
-.Skills th {
+#Skills th {
     text-align: center;
 }

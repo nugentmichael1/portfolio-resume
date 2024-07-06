@@ -1,7 +1,8 @@
 //Software Engineering Portfolio 2023
 
 //import routes (links) ability from react
-import { Routes, Route } from 'react-router-dom';
+// import { Routes, Route} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 //components
 import Footer from './Components/Footer'
@@ -34,7 +35,7 @@ function App() {
     const retrieveData = async () => {
 
       const data = await retrieveAllData();
-      
+
       distributeData(data);
     }
 
@@ -60,11 +61,30 @@ function App() {
     }
   }, [])
 
+
+  //navbar scroll
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    // console.log(hash);
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        // console.log("Scroll to ", id);
+      }
+    }
+  }, [hash]);
+
   return (
     <>
-      <Routes>
-        {/* <Route path="/" element={[<Header key={"title"} />, <NavBar key={"nav"} />]} />
-        <Route path="/:page" element={[<Header key={"title"} />, <NavBar key={"nav"} />]} /> */}
+      <Header />
+      <AcademicProjects data={projectsData} />
+      <Education />
+      <Skills languagesData={languagesData} />
+      <WorkExperience data={experienceData} />
+      {/* <Routes>
         <Route path="/" element={<Header key={"title"} />} />
         <Route path="/:page" element={<Header key={"title"} />} />
       </Routes>
@@ -74,7 +94,7 @@ function App() {
         <Route path="/Education" element={<Education />} />
         <Route path="/Skills" element={<Skills languagesData={languagesData} />} />
         <Route path="/Work_Experience" element={<WorkExperience data={experienceData} />} />
-      </Routes>
+      </Routes> */}
       <Footer />
     </>
   );

@@ -25,7 +25,7 @@ function WorkExperience({ data }) {
   }, [data])
 
   return (
-    <div className='WorkExperience'>
+    <div id='Work_Experience' className='section'>
       <h2>Work Experience</h2>
       <WorkExperienceIndustry data={industryData} />
       <WorkExperienceGeneral data={generalData} />

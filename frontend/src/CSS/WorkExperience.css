@@ -1,52 +1,52 @@
-.WorkExperience {
+#Work_Experience {
     background-color: var(--Section4);
 }
 
-.WorkExperience h4 {
+#Work_Experience h4 {
     color: var(--Purple1);
 }
 
-.WorkExperience tr.odd {
+#Work_Experience tr.odd {
     background-color: var(--Odd);
     color: var(--Even);
 }
 
-.WorkExperience tr.even {
+#Work_Experience tr.even {
     background-color: var(--Even);
     color: var(--Odd);
 }
 
-.WorkExperience thead {
+#Work_Experience thead {
     display: none;
 }
 
-.WorkExperience td.description {
+#Work_Experience td.description {
     text-align: left;
     padding: 0 2vw;
 }
 
-.WorkExperience table {
-    margin: 0 auto;
+#Work_Experience table {
+    margin: 2vh auto;
     width: 90vw;
 }
 
-.WorkExperience .start {
+#Work_Experience .start {
     width: 10%;
 }
 
-.WorkExperience .end {
+#Work_Experience .end {
     width: 10%;
 }
 
-.WorkExperience .title {
+#Work_Experience .title {
     width: 30%;
 }
 
-.WorkExperience .company {
+#Work_Experience .company {
     width: 30%;
 }
 
-.WorkExperience .location {
+#Work_Experience .location {
     width: 20%;
 }
 

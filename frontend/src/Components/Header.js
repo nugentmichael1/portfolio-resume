@@ -1,7 +1,8 @@
 import React from 'react'
 
 //components
-import NavBar from './NavBar'
+// import NavBar from './NavBar'
+import NavBarScroll from './NavBarScroll'
 
 //css
 import "../CSS/Header.css"
@@ -21,7 +22,8 @@ function Header() {
                 </h3>
             </div>
             {/* <img src={Headshot} alt='Headshot of Michael Nugent' /> */}
-            <NavBar />
+            {/* <NavBar /> */}
+            <NavBarScroll />
         </div>
     )
 }

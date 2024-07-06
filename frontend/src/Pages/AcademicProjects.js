@@ -18,7 +18,7 @@ import CardsContainer from '../Components/CardsContainer'
 function Projects({ data }) {
 
   // const [carouselContent, setCarouselContent] = useState(<p>Fetching academic projects data from backend.  This should only take 3 seconds at most.</p>)
-  const [cardsContainerContent, setCardsContainerContent] = useState(<CardsContainer />)
+  const [cardsContainerContent, setCardsContainerContent] = useState("Please wait a few seconds while data is fetched from the server.")
 
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function Projects({ data }) {
   }, [data])
 
   return (
-    <div className='Projects'>
+    <div id='Projects' className='section'>
       <h2>Academic Projects</h2>
       {/* {carouselContent} */}
       {cardsContainerContent}

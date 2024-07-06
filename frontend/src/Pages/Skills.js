@@ -11,7 +11,7 @@ import '../CSS/Skills.css'
 
 function Skills({ languagesData }) {
     return (
-        <div className='Skills'>
+        <div id='Skills' className='section'>
             <h2>Skills</h2>
             <div className='SkillsTables'>
                 <Languages data={languagesData} />

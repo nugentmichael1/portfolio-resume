@@ -8,6 +8,8 @@
     top: 0;
     align-items: center;
     z-index: 1000;
+    /* overflow: visible; */
+    /* height: 50px; */
 }
 
 #headerHeadings {
