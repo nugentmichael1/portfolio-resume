@@ -3,6 +3,15 @@
     padding: 0;
     /* width: 90vw; */
     /* max-width: 95vw; */
+    /* background-image: url('../Assets/Classroom.jpeg');
+    background-size: cover;
+    background-position: center; */
+    background-color: var(--Section0);
+}
+
+.Projects h2 {
+    /* background-color: black; */
+    color: var(--H2);
 }
 
 /* #projectsCaption {

@@ -14,9 +14,9 @@ function WebDevelopment() {
   return (
     <table id={"WebDevelopment"}>
       <caption>
-        <h3>
+        <h4>
           Web Development
-        </h3>
+        </h4>
       </caption>
       {buildSkillsTBody(WDData)}
     </table>)

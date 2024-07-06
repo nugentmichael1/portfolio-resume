@@ -5,12 +5,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    /* border: 1px solid #ccc; */
+    /* background-color: black; */
 }
 
 .card {
     width: 300px;
     height: auto;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,11 +22,12 @@
 .card img {
     width: 100%;
     height: auto;
+    /* border: 1px solid black; */
 }
 
 .card-content {
     padding: 1vh 1vw;
-    /* border: 1px solid #ccc; */
+    border-top: 1px solid black;
 }
 
 .card-title {

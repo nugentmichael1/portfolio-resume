@@ -2,7 +2,9 @@ footer {
     position: sticky;
     bottom: 0;
     /* background-color: var(--DarkBlue); */
-    background-image: linear-gradient(white, var(--DarkBlue));
+    /* background-image: linear-gradient(white, var(--DarkBlue)); */
+    /* background-color: var(--FooterBg); */
+    background-image: linear-gradient(var(--FooterBg0), var(--FooterBg1));
     width: 100%;
     /* margin: 0; */
     flex-shrink: 0;

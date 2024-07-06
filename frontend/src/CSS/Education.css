@@ -1,11 +1,7 @@
-:root {
-    /*Fresno State Colors*/
-    /*red*/
-    --Pantone186: #c41230;
-    /*blue*/
-    --Pantone2767: #13284c;
-    /*Cool Gray*/
-    --PantoneCoolGray7: #98989a;
-    /*Green V*/
-    --Pantone356: #007935;
+.education{
+    background-color: var(--Section2);
+}
+
+.education H2{
+    color: var(--H2);
 }

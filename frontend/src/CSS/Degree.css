@@ -1,3 +1,15 @@
+.degree {
+    /*Fresno State Colors*/
+    /*red*/
+    --Pantone186: #c41230;
+    /*blue*/
+    --Pantone2767: #13284c;
+    /*Cool Gray*/
+    --PantoneCoolGray7: #98989a;
+    /*Green V*/
+    --Pantone356: #007935;
+}
+
 .degree td {
     color: var(--Pantone186);
     border-collapse: initial;
@@ -59,5 +71,6 @@ td.info {
 }
 
 .csuf caption {
-    /* display: none; */
+    display: none;
+    /* color: var(--H2); */
 }

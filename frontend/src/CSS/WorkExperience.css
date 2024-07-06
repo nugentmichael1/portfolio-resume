@@ -1,9 +1,19 @@
+.WorkExperience {
+    background-color: var(--Section4);
+}
+
+.WorkExperience h4 {
+    color: var(--Purple1);
+}
+
 .WorkExperience tr.odd {
     background-color: var(--Odd);
+    color: var(--Even);
 }
 
 .WorkExperience tr.even {
     background-color: var(--Even);
+    color: var(--Odd);
 }
 
 .WorkExperience thead {

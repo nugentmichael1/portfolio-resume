@@ -18,9 +18,9 @@ const Soft = function () {
 
         <table id="Soft">
             <caption>
-                <h3>
+                <h4>
                     Soft Skills
-                </h3>
+                </h4>
             </caption>
                 {buildSkillsTBody(sSData)}
             {/* <tbody>

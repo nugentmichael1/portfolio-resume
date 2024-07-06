@@ -18,9 +18,9 @@ function SoftwareEngineering() {
     return (
         < table id='SoftwareEngineering' >
             <caption>
-                <h3>
+                <h4>
                     Software Engineering
-                </h3>
+                </h4>
             </caption>
             {buildSkillsTBody(SEData)}
         </table >

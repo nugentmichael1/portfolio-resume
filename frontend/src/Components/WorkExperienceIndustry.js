@@ -23,7 +23,7 @@ function WorkExperienceIndustry({ data }) {
   return (
     <>
       <table className='WorkExperienceIndustry'>
-        <caption><h3>Industry Relevant</h3></caption>
+        <caption><h4>Industry Relevant</h4></caption>
         <thead>
           <tr>
             <th>Start</th>

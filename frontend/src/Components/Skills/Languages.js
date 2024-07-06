@@ -145,7 +145,7 @@ function Languages({ data }) {
 
             <table id='LanguagesExperience'>
                 <caption>
-                    <h3>Languages</h3>
+                    <h4>Languages</h4>
                 </caption>
                 <thead>
                     <tr>

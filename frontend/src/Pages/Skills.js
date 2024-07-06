@@ -12,11 +12,13 @@ import '../CSS/Skills.css'
 function Skills({ languagesData }) {
     return (
         <div className='Skills'>
-            {/* <h1>Skills</h1> */}
-            <Languages data={languagesData} />
-            <WebDevelopment />
-            <SoftwareEngineering />
-            <Soft />
+            <h2>Skills</h2>
+            <div className='SkillsTables'>
+                <Languages data={languagesData} />
+                <WebDevelopment />
+                <SoftwareEngineering />
+                <Soft />
+            </div>
         </div>
     )
 }

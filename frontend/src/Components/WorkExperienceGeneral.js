@@ -51,7 +51,7 @@ function WorkExperienceGeneral({ data }) {
   return (
     <>
       <table className='WorkExperienceGeneral'>
-        <caption><h3>General</h3></caption>
+        <caption><h4>General</h4></caption>
         <thead>
           <tr>
             <th>Start</th>
