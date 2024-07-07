@@ -30,7 +30,7 @@ function Projects({ data }) {
 
   return (
     <div id='Projects' className='section'>
-      <h2>Academic Projects</h2>
+      <h1 className='pageh1'>Academic Projects</h1>
       {/* {carouselContent} */}
       {cardsContainerContent}
     </div >

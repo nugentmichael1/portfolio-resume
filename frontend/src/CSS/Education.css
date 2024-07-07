@@ -1,7 +1,9 @@
-#Education{
-    background-color: var(--Section2);
+#Education {
+    /* background-color: var(--Color0); */
+    /* background-image: linear-gradient(var(--Color1), var(--Color3)); */
 }
 
-#Education H2{
-    color: var(--H2);
+#Education H2 {
+    /* color: var(--Color4); */
+    /* text-shadow: none; */
 }

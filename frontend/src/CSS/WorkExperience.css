@@ -1,19 +1,21 @@
 #Work_Experience {
-    background-color: var(--Section4);
+    /* background-color: var(--Color0); */
+    /* background-image: linear-gradient(var(--Color1), var(--Color3)); */
 }
 
-#Work_Experience h4 {
-    color: var(--Purple1);
+#Work_Experience caption h4 {
+    color: var(--Color0);
+    font-size: 1.5rem;
 }
 
 #Work_Experience tr.odd {
-    background-color: var(--Odd);
-    color: var(--Even);
+    /* background-color: var(--Color4); */
+    color: var(--Color0);
 }
 
 #Work_Experience tr.even {
-    background-color: var(--Even);
-    color: var(--Odd);
+    background-color: var(--Color4);
+    color: var(--Color0);
 }
 
 #Work_Experience thead {

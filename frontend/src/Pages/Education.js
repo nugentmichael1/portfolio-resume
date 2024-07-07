@@ -13,7 +13,7 @@ const Education = () => {
 
     return (
         <div id='Education' className='section'>
-            <h2>Education</h2>
+            <h1 className='pageh1'>Education</h1>
             <Degree />
         </div>
     )

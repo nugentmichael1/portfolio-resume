@@ -1,17 +1,19 @@
 #Projects {
     /* margin: 4vh auto; */
-    padding: 0;
+    /* padding: 0; */
     /* width: 90vw; */
     /* max-width: 95vw; */
     /* background-image: url('../Assets/Classroom.jpeg');
     background-size: cover;
     background-position: center; */
-    background-color: var(--Section0);
+    /* background-color: var(--Section0); */
+    /* background-image: linear-gradient(var(--Color3), var(--Color1)); */
+
 }
 
 #Projects h2 {
     /* background-color: black; */
-    color: var(--H2);
+    /* color: var(--H2); */
 }
 
 /* #projectsCaption {

@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// bootstrap cdn link is in index.html, now.  can delete this import.
-// import 'bootstrap/dist/css/bootstrap.min.css'
-
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

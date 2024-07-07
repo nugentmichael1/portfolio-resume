@@ -14,16 +14,19 @@ nav ul {
 
 nav .NavLink-Active li {
     /* color: black; */
-    color: var(--ActiveLinkFont);
-    background-color: var(--ActiveLinkBg);
+    color: var(--Color0);
+    background-color: var(--Color4);
     background-image: none;
+    /* border: 1px solid var(--Color0); */
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); */
 }
 
 .NavLink li:hover {
     /* color: black;
     background-color: white; */
-    color: var(--NavLinkFontHover);
-    background-color: var(--NavLinkBgHover);
+    color: var(--Color0);
+    background-color: var(--Color4);
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); */
     background-image: none;
 }
 
@@ -33,9 +36,10 @@ nav a {
 
 nav li {
     /* color: white; */
-    color: var(--NavLinkFont);
+    color: var(--Color4);
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); */
     /* background-image: linear-gradient(white, var(--DarkBlue), white); */
-    background-color: var(--NavLinkBg);
+    background-color: var(--Color0);
     padding: 1vh 1vw;
     border-radius: 50px;
     display: inline-block;

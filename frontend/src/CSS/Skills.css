@@ -1,7 +1,8 @@
 /* Skills Page CSS*/
 
 #Skills {
-    background-color: var(--Section3);
+    /* background-color: var(--Color4); */
+    /* background-image: linear-gradient(var(--Color3), var(--Color1)); */
 }
 
 .SkillsTables {
@@ -9,8 +10,8 @@
     flex-wrap: wrap;
 }
 
-#Skills H2 {
-    color: var(--H2);
+#Skills H4 {
+    color: var(--Color0);
 }
 
 #Skills table {
@@ -26,12 +27,12 @@
 
 #Skills li.odd {
     background-color: var(--Odd);
-    color: var(--Even);
+    color: var(--Color0);
 }
 
 #Skills li.even {
-    background-color: var(--Even);
-    color: var(--Odd);
+    background-color: var(--Color4);
+    color: var(--Color0);
 }
 
 #Skills li {
@@ -44,21 +45,17 @@
 }
 
 #Skills tr.odd {
-    background-color: var(--Odd);
-    color: var(--Even);
+    background-color: var(--Color4);
+    color: var(--Color0);
 }
 
 #Skills tr.even {
     background-color: var(--Even);
-    color: var(--Odd);
+    color: var(--Color0);
 }
 
 #Skills table#LanguagesExperience {
     border-collapse: collapse;
-}
-
-#Skills table#LanguagesExperience H3 {
-    color: var(--Purple0);
 }
 
 #Skills table#LanguagesExperience td {
