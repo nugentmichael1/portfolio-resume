@@ -18,7 +18,7 @@ function Header() {
                     Michael Nugent
                 </h1>
                 <h3>
-                    Junior Software Engineer
+                    Jr Software Engineer
                 </h3>
             </div>
             {/* <img src={Headshot} alt='Headshot of Michael Nugent' /> */}

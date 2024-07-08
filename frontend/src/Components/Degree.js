@@ -14,10 +14,7 @@ function Degree() {
 
                 <tbody>
                     <tr>
-
-                        <td className='info' id="school"><a href="https://csm.fresnostate.edu/csci/index.html" target="_blank" rel="noreferrer" title='Fresno State Website'>
-                            California State University, Fresno
-                        </a>
+                        <td id="degreeName" className='info'>Computer Science, BS
                         </td>
 
                         <td rowSpan={4} className="bulldogLogo">
@@ -39,11 +36,13 @@ function Degree() {
                     </tr>
 
                     <tr>
-                        <td className='info' id="gradDate">2010-2012, 2020-2022
+                        <td className='info' id="school"><a href="https://csm.fresnostate.edu/csci/index.html" target="_blank" rel="noreferrer" title='Fresno State Website'>
+                            California State University, Fresno
+                        </a>
                         </td>
                     </tr>
                     <tr>
-                        <td id="degreeName" className='info'>B.S. Computer Science
+                        <td className='info' id="gradDate">2022
                         </td>
                     </tr>
                     <tr>

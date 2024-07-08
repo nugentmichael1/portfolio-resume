@@ -1,55 +1,10 @@
 html {
-    /*Nav colors*/
-    /* --DarkBlue: #050A30;
-    --DarkOlive: #2b3618; */
-
-    /* --Odd: #9deba4;
-    --Even: #9dd5eb; */
-
-    /*Blues: Header/Footer Bgs*/
-    /* --Blue4: #5973B0;
-    --Blue3: #335093;
-    --Blue2: #1B3776;
-    --Blue1: #092055;
-    --Blue0: #020D27; */
-
-    /* --Blue4: #4a639e;
-    --Blue3: #2e4b8d;
-    --Blue2: #1b3776;
-    --Blue1: #0c2560;
-    --Blue0: #051843; */
 
     --Color4: #CED1D6;
     --Color3: #707EA0;
     --Color2: #314676;
     --Color1: #0B1F4D;
     --Color0: #010B22;
-
-    /* --NavLinkBg: #020D27; */
-    /* --FooterBg0: #1B3776;
-    --FooterBg1: #020D27; */
-
-
-    /*Greens: Section/Page Bgs*/
-    /* --Green4: #E7F96F;
-    --Green3: #C2D63A;
-    --Green2: #99AC18;
-    --Green1: #6C7C00;
-    --Green0: #323900; */
-
-    /*Browns: Text*/
-    /* --Brown4: #FFD072;
-    --Brown3: #DCA63C;
-    --Brown2: #B17E18;
-    --Brown1: #7F5500;
-    --Brown0: #3B2700; */
-
-    /*Purples: ??*/
-    /* --Purple4: #A24FAD;
-    --Purple3: #842990;
-    --Purple2: #681274;
-    --Purple1: #490254;
-    --Purple0: #220027; */
 
     /* background-color: white; */
     height: 100%;
@@ -66,7 +21,6 @@ div#WorkExperience {
 
 body {
     min-height: 100%;
-
 }
 
 #root {
@@ -81,7 +35,6 @@ body {
     flex-direction: column;
     overflow: visible;
     /* background-image: linear-gradient(white, var(--Color2)); */
-
 }
 
 ul {
@@ -96,12 +49,6 @@ caption {
 
 td {
     text-align: center;
-}
-
-table {
-    margin: 2vh 0;
-    border-collapse: collapse;
-    /* table-layout: fixed; */
 }
 
 a {
@@ -130,10 +77,22 @@ h4 {
     color: var(--Purple0);
 }
 
-.section {
-    scroll-margin-top: 100px;
-    padding: 2vh 0 2vh 0;
+/*Desktop*/
+@media only screen and (min-width:768px) {
+    .section {
+        scroll-margin-top: 8vh;
+        padding: 2vh 0 2vh 0;
+    }
 }
+
+/*Mobile*/
+@media only screen and (max-width:768px) {
+    .section {
+        scroll-margin-top: 10vh;
+        padding: 2vh 0 2vh 0;
+    }
+}
+
 
 .pageh1 {
     margin: 0 0;
@@ -141,5 +100,4 @@ h4 {
     font-size: 2rem;
     color: var(--Color0);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    /* border-bottom: 1px solid grey; */
 }

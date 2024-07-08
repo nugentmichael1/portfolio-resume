@@ -1,11 +1,10 @@
-#Work_Experience {
-    /* background-color: var(--Color0); */
-    /* background-image: linear-gradient(var(--Color1), var(--Color3)); */
-}
-
 #Work_Experience caption h4 {
     color: var(--Color0);
     font-size: 1.5rem;
+}
+
+#Work_Experience td {
+    padding: 1vh 0;
 }
 
 #Work_Experience tr.odd {
@@ -24,12 +23,14 @@
 
 #Work_Experience td.description {
     text-align: left;
-    padding: 0 2vw;
+    padding: 0 2vw 1vh 0;
 }
 
 #Work_Experience table {
     margin: 2vh auto;
     width: 90vw;
+    border-collapse: collapse;
+    /* table-layout: fixed; */
 }
 
 #Work_Experience .start {

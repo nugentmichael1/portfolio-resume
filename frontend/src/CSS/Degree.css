@@ -11,7 +11,7 @@
 }
 
 .degree td {
-    color: var(--Pantone186);
+    /* color: var(--Pantone186); */
     border-collapse: initial;
 }
 
@@ -29,23 +29,18 @@ td#honors {
     object-fit: scale-down;
 }
 
-/* td#degreeName {
-    /* color: var(--Pantone186); */
-/* font-weight: bold; */
-/* } */
-
 #school a {
-    color: var(--Pantone186);
+    color: white;
     text-decoration: none;
-    /* color: white; */
 }
 
 #school a:hover {
+    color: var(--Pantone2767);
     background-color: white;
 }
 
 table.csuf {
-    background-color: var(--PantoneCoolGray7);
+    /* background-color: var(--PantoneCoolGray7); */
     border-collapse: collapse;
     border: 1px solid var(--PantoneCoolGray7);
     margin: 2vh auto;
@@ -58,19 +53,24 @@ td.diploma {
 
 .diploma a {
     color: var(--Pantone186);
+    /* color: var(--Pantone2767); */
     text-decoration: none;
 }
-
 
 td.bulldogLogo {
     background-color: var(--Pantone186);
 }
 
-td.info {
+.csuf td.info {
     background-color: var(--Pantone2767);
+    font-size: 1.25rem;
+    /* text-shadow: 1px 1px 1px rgba(152, 152, 154, 1); */
+    /* text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); */
+    /* text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); */
+    padding: 1vh 1vw;
+    color: white;
 }
 
 .csuf caption {
     display: none;
-    /* color: var(--H2); */
 }

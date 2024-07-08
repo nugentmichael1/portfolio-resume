@@ -19,12 +19,28 @@
     text-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
 }
 
-#headerHeadings h1 {
-    font-size: xxx-large;
-    margin: 0;
+/*Desktop*/
+@media only screen and (min-width: 768px) {
+    #headerHeadings h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    #headerHeadings h3 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
 }
 
-#headerHeadings h3 {
-    font-size: x-large;
-    margin: 0;
+/*Mobile*/
+@media only screen and (max-width: 767px) {
+    #headerHeadings h1 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    #headerHeadings h3 {
+        font-size: 1rem;
+        margin: 0;
+    }
 }

@@ -3,42 +3,50 @@
 const buildSkillsTBody = (obj) => {
 
     const headerCells = []
-    const dataCells = []
+    const trs = []
 
     let oddXorEven = 'odd'
 
-    Object.keys(obj).forEach((category) => {
+    const keys = Object.keys(obj)
+
+
+    //th cells
+    keys.forEach((category) => {
         headerCells.push(
             <th key={category} className={oddXorEven}>{category}</th>
         )
-
-        const li = []
-
-        let oddXorEven2 = 'odd'
-
-        obj[category].forEach((element) => {
-            li.push(
-                <li key={element} className={oddXorEven2}>{element}</li>
-            )
-            oddXorEven2 = (oddXorEven2 === 'odd') ? 'even' : 'odd'
-
-        })
-
-        dataCells.push(
-            <td key={category} className={oddXorEven}><ul>{li}</ul></td>
-        )
-
-        // oddXorEven = (oddXorEven === 'odd') ? 'even' : 'odd'
-
     });
+
+
+    //find longest category
+    let longest = 0
+    keys.forEach((key) => {
+        if (obj[key].length > longest) longest = obj[key].length
+    })
+
+
+
+    for (let i = 0; i < longest; i++) {
+        const tds = []
+
+        keys.forEach(
+            (category) => tds.push(<td key={category}>
+                {obj[category][i]}
+            </td>)
+        )
+        // console.log(tds)
+
+        trs.push(<tr key={i} className={oddXorEven}>{tds}</tr>)
+        oddXorEven = (oddXorEven === 'odd') ? 'even' : 'odd'
+    }
+
+
 
     return <tbody>
         <tr>
             {headerCells}
         </tr>
-        <tr>
-            {dataCells}
-        </tr>
+        {trs}
     </tbody>
 }
 

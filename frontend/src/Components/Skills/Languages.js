@@ -24,7 +24,7 @@ const buildExperienceTableBody = (data) => {
         tds.push(<td key="name">{language.Name}</td>)
         tds.push(<td key="experience">{language.YearsExperience}</td>)
 
-        const oddXorEvenClass = (i % 2 === 0) ? "even" : "odd"
+        const oddXorEvenClass = (i % 2 === 1) ? "even" : "odd"
         trs.push(<tr key={language.Name} className={oddXorEvenClass}>{tds}</tr>)
     })
 
