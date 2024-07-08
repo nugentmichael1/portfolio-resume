@@ -3,6 +3,7 @@
 .SkillsTables {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #Skills H4 {
