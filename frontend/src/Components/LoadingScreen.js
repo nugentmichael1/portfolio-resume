@@ -9,8 +9,8 @@ function LoadingScreen() {
             <h2>Software Engineer</h2>
             {/* <h3>Portfolio</h3> */}
             <div className='spinner'></div>
-            {/* <p>Loading...</p> */}
-            <p>Please wait a few moments while Google Firebase initializes a backend instance.</p>
+            <p>Loading...</p>
+            {/* <p>Please wait a few moments while Google Firebase initializes a backend instance.</p> */}
         </div>
     )
 }
