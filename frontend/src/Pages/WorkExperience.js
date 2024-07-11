@@ -7,10 +7,9 @@ import React, { useEffect, useState } from 'react'
 import "../CSS/WorkExperience.css"
 
 // components
-import WorkExperienceGeneral from '../Components/WorkExperienceGeneral'
-import WorkExperienceIndustry from '../Components/WorkExperienceIndustry'
+import WorkExperience from '../Components/WorkExperience'
 
-function WorkExperience({ data }) {
+function WorkExperienceSection({ data }) {
 
 
   const [industryData, setIndustryData] = useState(null)
@@ -27,10 +26,10 @@ function WorkExperience({ data }) {
   return (
     <div id='Work_Experience' className='section'>
       <h1 className='pageh1'>Work Experience</h1>
-      <WorkExperienceIndustry data={industryData} />
-      <WorkExperienceGeneral data={generalData} />
+      <WorkExperience data={industryData} name="Industry-Relevant" />
+      <WorkExperience data={generalData} name="General" />
     </div>
   )
 }
 
-export default WorkExperience
+export default WorkExperienceSection

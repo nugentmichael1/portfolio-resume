@@ -5,14 +5,8 @@
 import { useLocation } from 'react-router-dom';
 
 //components
-import Footer from './Components/Footer'
-import Header from './Components/Header'
-
-//pages
-import Skills from './Pages/Skills'
-import WorkExperience from './Pages/WorkExperience';
-import Education from './Pages/Education'
-import AcademicProjects from './Pages/AcademicProjects'
+import LoadingScreen from './Components/LoadingScreen';
+import Content from './Components/Content';
 
 //css
 import './CSS/App.css'
@@ -20,6 +14,7 @@ import './CSS/App.css'
 //functions
 // import retrieveAllData from './Utility/retrieveAllData';
 import retrieveAllData from './FireBaseAdmin/retrieveAllData';
+import loadScreenFadeOut from './Utility/LoadingScreenFadeOut';
 
 import { useEffect, useState } from 'react';
 
@@ -32,6 +27,8 @@ function App() {
 
   const [experienceData, setExperienceData] = useState(null)
 
+
+  //Data retrieval and load screen tranisition
   useEffect(() => {
 
     const retrieveData = async () => {
@@ -46,6 +43,8 @@ function App() {
       setProjectsData(data.projects)
       setLanguagesData(data.languages)
       setExperienceData(data.experience)
+
+      loadScreenFadeOut();
     }
 
     //Complete download of all data from backend instead of individually as needed.  
@@ -58,6 +57,7 @@ function App() {
       retrieveData();
     }
     else {
+      //When data is still in the local storage, but not in the respective components
       const data = JSON.parse(dataStr);
       distributeData(data);
     }
@@ -81,12 +81,17 @@ function App() {
 
   return (
     <>
-      <Header />
-      <AcademicProjects data={projectsData} />
-      <Education />
-      <Skills languagesData={languagesData} />
-      <WorkExperience data={experienceData} />
-      {/* <Routes>
+      <LoadingScreen />
+      <Content projectsData={projectsData} languagesData={languagesData} experienceData={experienceData} />
+    </>
+  );
+}
+
+export default App;
+
+
+//This is the routes layout for a multi-page format as opposed to the single page scroll format.
+/* <Routes>
         <Route path="/" element={<Header key={"title"} />} />
         <Route path="/:page" element={<Header key={"title"} />} />
       </Routes>
@@ -96,10 +101,4 @@ function App() {
         <Route path="/Education" element={<Education />} />
         <Route path="/Skills" element={<Skills languagesData={languagesData} />} />
         <Route path="/Work_Experience" element={<WorkExperience data={experienceData} />} />
-      </Routes> */}
-      <Footer />
-    </>
-  );
-}
-
-export default App;
+      </Routes> */

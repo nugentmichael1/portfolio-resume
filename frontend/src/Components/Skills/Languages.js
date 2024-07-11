@@ -37,7 +37,7 @@ function Languages({ data }) {
     // states for table row and header
     // const [row, setRow] = useState(<td>Fetching languages data from backend.  This should only take 1-3 seconds.</td>)
     // const [thead, setTHead] = useState()
-    const [tbody, setTbody] = useState(<tr><td colSpan={2}>Fetching languages data from backend.  This should only take 1-3 seconds.</td></tr>)
+    const [tbody, setTbody] = useState(<tr><td colSpan={2}>Please wait a few seconds while Google Firebase initializes a backend instance.</td></tr>)
 
     useEffect(() => {
         if (data !== null) {

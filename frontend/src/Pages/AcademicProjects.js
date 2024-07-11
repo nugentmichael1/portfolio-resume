@@ -18,8 +18,10 @@ import CardsContainer from '../Components/CardsContainer'
 
 function Projects({ data }) {
 
+  const loadMessage = <p>Please wait a few seconds while Google Firebase initializes a backend instance.</p>
+
   // const [carouselContent, setCarouselContent] = useState(<p>Fetching academic projects data from backend.  This should only take 3 seconds at most.</p>)
-  const [cardsContainerContent, setCardsContainerContent] = useState(<p>Please wait a few seconds for the backend instance  data is fetched from the server.</p>)
+  const [cardsContainerContent, setCardsContainerContent] = useState(loadMessage)
 
 
   useEffect(() => {
