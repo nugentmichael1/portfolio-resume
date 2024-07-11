@@ -21,3 +21,8 @@
     padding-top: .5rem;
     padding-bottom: .5rem;
 } */
+
+#Projects p {
+    text-align: center;
+    margin: 1vh;
+}

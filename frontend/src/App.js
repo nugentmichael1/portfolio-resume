@@ -18,7 +18,9 @@ import AcademicProjects from './Pages/AcademicProjects'
 import './CSS/App.css'
 
 //functions
-import retrieveAllData from './Utility/retrieveAllData';
+// import retrieveAllData from './Utility/retrieveAllData';
+import retrieveAllData from './FireBaseAdmin/retrieveAllData';
+
 import { useEffect, useState } from 'react';
 
 

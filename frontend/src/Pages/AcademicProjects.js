@@ -14,11 +14,12 @@ import '../CSS/AcademicProjects.css'
 //Components
 import CardsContainer from '../Components/CardsContainer'
 // import CarouselContainer from '../Components/CarouselContainer'
+// import LogoLoader from '../Components/LogoLoader'
 
 function Projects({ data }) {
 
   // const [carouselContent, setCarouselContent] = useState(<p>Fetching academic projects data from backend.  This should only take 3 seconds at most.</p>)
-  const [cardsContainerContent, setCardsContainerContent] = useState("Please wait a few seconds while data is fetched from the server.")
+  const [cardsContainerContent, setCardsContainerContent] = useState(<p>Please wait a few seconds for the backend instance  data is fetched from the server.</p>)
 
 
   useEffect(() => {
@@ -30,6 +31,7 @@ function Projects({ data }) {
 
   return (
     <div id='Projects' className='section'>
+      {/* <LogoLoader /> */}
       <h1 className='pageh1'>Academic Projects</h1>
       {/* {carouselContent} */}
       {cardsContainerContent}

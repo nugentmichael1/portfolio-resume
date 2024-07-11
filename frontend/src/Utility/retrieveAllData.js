@@ -1,7 +1,7 @@
 // Function to retrieve all data from backend
 
 //express configuation
-import http from "../http-common"
+import http from "../Configuration/http-common"
 
 const retrieveAllData = async () => {
 

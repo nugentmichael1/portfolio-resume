@@ -8,10 +8,10 @@ const languagesDAO = require("../DAOs/languagesDAO")
 const experienceDAO = require("../DAOs/experienceDAO")
 const projectsDAO = require("../DAOs/projectsDAO")
 
-class allCtrl {
-    static async getAll(req, res, next) {
+class allCtrl2 {
+    static async getAll() {
 
-        functions.logger.info("Firebase Functions call made to get 'all' Firestore data.", { structuredData: true });
+        functions.logger.info("Firebase Functions call made to get 'all2' Firestore data.", { structuredData: true });
 
         const allData = {};
 
@@ -44,8 +44,8 @@ class allCtrl {
         allData.projects = projects
 
 
-        res.send(allData)
+        return (allData)
     }
 }
 
-exports.api = allCtrl
+exports.api = allCtrl2
