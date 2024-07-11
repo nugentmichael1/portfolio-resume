@@ -6,10 +6,11 @@ function LoadingScreen() {
     return (
         <div id='loading-screen'>
             <h1>Michael Nugent</h1>
-            <h2>Jr. Software Engineer</h2>
-            <h3>Portfolio</h3>
+            <h2>Software Engineer</h2>
+            {/* <h3>Portfolio</h3> */}
             <div className='spinner'></div>
-            <p>Loading...</p>
+            {/* <p>Loading...</p> */}
+            <p>Please wait a few moments while Google Firebase initializes a backend instance.</p>
         </div>
     )
 }

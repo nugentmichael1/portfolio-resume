@@ -13,6 +13,7 @@
     color: var(--Color4);
     opacity: 1;
     transition: opacity 4s ease-out;
+    text-align: center;
 }
 
 #loading-screen.fade-out {
@@ -34,12 +35,14 @@
 }
 
 #loading-screen .spinner {
+    margin: 15vh 0 1vh 0;
     width: 4rem;
     height: 4rem;
-    border: 4px solid var(--Color2);
-    border-top: 4px solid var(--Color1);
+    border: 4px solid var(--Color3);
+    border-top: 4px solid var(--Color2);
     border-radius: 50%;
     animation: spin 4s linear infinite;
+    /* background-color: var(--Color1); */
 }
 
 @keyframes spin {

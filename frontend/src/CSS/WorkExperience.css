@@ -23,15 +23,21 @@
 
 #Work_Experience td.description {
     text-align: left;
-    padding: 0 2vw 1vh 0;
+    /* padding: 0 2vw 1vh 0; */
+}
+
+#Work_Experience table {
+    border-collapse: collapse;
+    margin: 2vh auto;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 /*Desktop*/
 @media only screen and (min-width: 768px) {
     #Work_Experience table {
-        margin: 2vh auto;
         width: 90vw;
-        border-collapse: collapse;
     }
 }
 
@@ -39,13 +45,21 @@
 @media only screen and (max-width: 767px) {
     #Work_Experience table {
         margin: 2vh auto;
-        /* width: 90vw; */
         border-collapse: collapse;
+        font-size: 1rem;
     }
 }
 
-/*
-#Work_Experience td.start {
+/*Debug tool*/
+/* 
+@media only screen and (orientation: landscape) {
+    #Work_Experience table {
+        font-size: 1rem;
+    }
+} */
+
+
+/* #Work_Experience td.start {
     width: 10%;
     padding-right: 1vw;
 }
@@ -64,9 +78,9 @@
 
 #Work_Experience .location {
     width: 20%;
-}
+} */
 
-*/
+
 /* table.WorkExperience tr {
     margin: 2vh;
-} */
+}*/
