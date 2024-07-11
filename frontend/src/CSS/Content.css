@@ -1,0 +1,10 @@
+
+div#content {
+    opacity: 0;
+    transition: opacity 4s ease-in;
+}
+
+div#content.visible {
+    opacity: 1;
+    z-index: 5;
+}

@@ -93,73 +93,10 @@ h4 {
     }
 }
 
-
 .pageh1 {
     margin: 0 0;
     text-align: center;
     font-size: 2rem;
     color: var(--Color0);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-}
-
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--Color0);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    color: var(--Color4);
-    opacity: 1;
-    transition: opacity 4s ease-out;
-}
-
-#loading-screen.fade-out {
-    opacity: 0;
-}
-
-#loading-screen h1 {
-    font-size: 4rem;
-    text-align: center;
-}
-
-#loading-screen h2 {
-    font-size: 2rem;
-}
-
-#loading-screen h3 {
-    font-size: 1.5rem;
-}
-
-#loading-screen .spinner {
-    width: 4rem;
-    height: 4rem;
-    border: 4px solid var(--Color2);
-    border-top: 4px solid var(--Color1);
-    border-radius: 50%;
-    animation: spin 4s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-div#content {
-    opacity: 0;
-    transition: opacity 4s ease-in;
-}
-
-div#content.visible {
-    opacity: 1;
 }

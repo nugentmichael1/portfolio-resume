@@ -10,6 +10,9 @@ import WorkExperience from '../Pages/WorkExperience';
 import Education from '../Pages/Education'
 import AcademicProjects from '../Pages/AcademicProjects'
 
+//css
+import "../CSS/Content.css"
+
 
 function Content({ projectsData, languagesData, experienceData }) {
     return (

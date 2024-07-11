@@ -1,5 +1,7 @@
 import React from 'react'
 
+import "../CSS/LoadingScreen.css"
+
 function LoadingScreen() {
     return (
         <div id='loading-screen'>
