@@ -1,6 +1,7 @@
 
 import { initializeApp } from "firebase/app";
-import { connectFunctionsEmulator, getFunctions } from "firebase/functions";
+import { getFunctions, connectFunctionsEmulator } from "firebase/functions";
+import { getStorage, connectStorageEmulator } from "firebase/storage";
 
 //connect to firebase app via credentials, which are stored locally (not in git repository) in .env file.  Can be retrieved from firebase console (firebase.google.com).
 const firebaseConfig = {
@@ -20,9 +21,19 @@ const app = initializeApp(firebaseConfig);
 //Initialize (callable) Cloud Functions 
 const functions = getFunctions(app);
 
+//Initialize storage
+const storage = getStorage(app);
+
+// Change this to match process.env like with storage?
+// if (window.location.hostname === 'localhost') {
+//     connectFunctionsEmulator(functions, 'localhost', 5001);
+// }
+
+
 // Set backend to emulator in development
-if (window.location.hostname === 'localhost') {
+if (process.env.NODE_ENV === 'development' || window.location.hostname === 'localhost') {
+    connectStorageEmulator(storage, "localhost", 9199);
     connectFunctionsEmulator(functions, 'localhost', 5001);
 }
 
-export { functions };
+export { functions, storage };
